@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecipeBook.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="mainpage_coverimage.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Your recipes" />
+
+            <Button
+                x:Name="RecipeBtn"
+                Text="Your Recipes" 
+                SemanticProperties.Hint="Opens recipe page"
+                Clicked="btnRecipeClicked"
+                HorizontalOptions="Fill" 
+                FontSize="Medium"
+                FontFamily="Pixel"
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

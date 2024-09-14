@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:RecipeBook.Recipes"
+             x:Class="RecipeBook.ViewRecipe"
+             Title="ViewRecipe">
+    <ScrollView>
+    <VerticalStackLayout Padding="20">
+        <!-- Recipe Name -->
+        <Label 
+                    Text="{Binding Name}" 
+                    FontSize="Large" 
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center" 
+                    Margin="0, 10, 0, 10" 
+            FontFamily="Pixel"/>
+
+        <!-- Recipe Description -->
+        <Label 
+                    Text="{Binding Description}" 
+                    FontSize="Medium" 
+                    HorizontalOptions="Center" 
+                    Margin="0, 10, 0, 20" 
+            FontFamily="Pixel"/>
+
+        <!-- Ingredients Section -->
+        <Label 
+                    Text="Ingredients:" 
+                    FontSize="Large" 
+                    FontAttributes="Bold"
+                    Margin="0, 10, 0, 10" 
+            FontFamily="Pixel"/>
+
+        <CollectionView ItemsSource="{Binding Ingredients}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Name}" 
+                                   FontSize="Medium"
+                                   Margin="0, 5, 0, 5" 
+                           FontFamily="Pixel"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Instructions Section -->
+        <Label 
+                    Text="Instructions:" 
+                    FontSize="Large" 
+                    FontAttributes="Bold"
+                    Margin="0, 20, 0, 10" 
+            FontFamily="Pixel"/>
+
+        <CollectionView ItemsSource="{Binding Instructions}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Direction}"
+                                   FontSize="Medium"
+                                   Margin="0, 5, 0, 5" 
+                           FontFamily="Pixel"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button
+        x:Name="btnEdit"
+        Text="Edit Recipe" 
+        SemanticProperties.Hint="Opens a page to edit recipe"
+        Clicked="btnEditClicked"
+        HorizontalOptions="Fill" 
+            FontSize="Medium"
+            FontFamily="Pixel"/>
+
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

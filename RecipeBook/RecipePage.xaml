@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:RecipeBook.Recipes"
+             x:Class="RecipeBook.RecipePage"
+             x:Name="recipePage">
+
+    <ContentPage.BindingContext>
+        <vm:RecipeList/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="Your Recipes"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" 
+                FontFamily="Pixel"/>
+
+            <Button
+                x:Name="btnAdd"
+                Text="Add a new Recipe!" 
+                SemanticProperties.Hint="Opens a page to add a recipe"
+                Clicked="btnAddClicked"
+                HorizontalOptions="Fill" 
+                FontSize="Medium"
+                FontFamily="Pixel"/>
+
+            <!-- CollectionView for displaying recipe buttons -->
+            <CollectionView ItemsSource="{Binding Recipes}" IsEnabled="True" IsVisible="True">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="LightGray" Padding="10" Margin="5">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnRecipeTapped" CommandParameter="{Binding .}" />
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Recipe Name Label -->
+                                <Label Text="{Binding Name}" 
+                           FontSize="Medium" 
+                           VerticalOptions="Center" 
+                           Grid.Column="0" 
+                           FontFamily="Pixel"
+                                       TextColor="Black"/>
+
+                                <!-- Delete Button -->
+                                <Button Text="Delete" 
+                            Clicked="OnDeleteRecipeClicked" 
+                            CommandParameter="{Binding .}" 
+                            Grid.Column="1" 
+                            WidthRequest="100"
+                            Margin="10, 0, 0, 0" 
+                            FontFamily="Pixel"/>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

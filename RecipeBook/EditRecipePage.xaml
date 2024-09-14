@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecipeBook.EditRecipePage"
+             Title="EditRecipePage">
+    <ScrollView>
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <!-- Mode Label -->
+        <Label x:Name="lableMode"
+               Text="" 
+               FontSize="Title" 
+               FontAttributes="Bold"
+               Margin="0, 20, 0, 10" 
+               FontFamily="Pixel"/>
+
+        <!-- Recipe Name with Edit Icon -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="lableRecipeName"
+                   Text="" 
+                   FontSize="Large" 
+                   FontAttributes="Bold"
+                   Margin="0, 30, 0, 50"
+                   Grid.Column="0" 
+                   FontFamily="Pixel"/>
+            
+            <ImageButton Source="pencil_icon.png"
+                         x:Name="btnEditName" 
+                         Clicked="btnEditNameClicked"
+                         HorizontalOptions="Start"
+                         VerticalOptions="Center"
+                         Grid.Column="1" 
+                         />            
+
+            
+        </Grid>
+
+        <!-- Ingredients CollectionView -->
+        <CollectionView ItemsSource="{Binding Ingredients}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame 
+                BorderColor="Purple" 
+                CornerRadius="5" 
+                Padding="10" 
+                Margin="10, 5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding Name}" 
+                           FontSize="Medium"
+                           Margin="0, 5, 0, 5" 
+                           Grid.Column="0" 
+                                   FontFamily="Pixel"
+                                   TextColor="Black"/>
+
+                            <Button Text="Delete" 
+                            Clicked="OnDeleteIngredientClicked" 
+                            CommandParameter="{Binding .}" 
+                            Grid.Column="1" 
+                            Margin="10, 5, 0, 5" 
+                                    FontFamily="Pixel"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Add Ingredient Button -->
+        <Button x:Name="btnAddIngredient" 
+        Text="Add Ingredient" 
+        Clicked="OnAddIngredientClicked" 
+        Margin="0, 0, 0, 30"
+        FontSize="Medium"
+                FontFamily="Pixel"/>
+
+        <!-- Instructions CollectionView -->
+        <CollectionView ItemsSource="{Binding Instructions}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame 
+                BorderColor="LightGray" 
+                CornerRadius="5" 
+                Padding="10" 
+                Margin="10, 5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding Direction}" 
+                           FontSize="Medium"
+                           Margin="0, 5, 0, 5" 
+                           Grid.Column="0" 
+                                   FontFamily="Pixel"
+                                   TextColor="Black"/>
+
+                            <Button Text="Delete" 
+                            Clicked="OnDeleteInstructionClicked" 
+                            CommandParameter="{Binding .}" 
+                            Grid.Column="1" 
+                            Margin="10, 5, 0, 5" 
+                                    FontFamily="Pixel"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Add Instruction Button -->
+        <Button x:Name="btnAddInstruction" 
+                Text="Add Instruction" 
+                Clicked="OnAddInstructionClicked" 
+                FontSize="Medium"
+                FontFamily="Pixel"/>
+
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

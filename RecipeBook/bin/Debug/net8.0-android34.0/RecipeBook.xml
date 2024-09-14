@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RecipeBook</name>
+    </assembly>
+    <members>
+        <member name="M:RecipeBook.MainPage.LoadRecipeList">
+            <summary>
+            Load the recipe list if available
+            </summary>
+        </member>
+        <member name="M:RecipeBook.MainPage.btnRecipeClicked(System.Object,System.EventArgs)">
+            <summary>
+            Click event for the recipe list button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:RecipeBook.Recipes.SaveHelper.SaveRecipeListToJson(RecipeBook.Recipes.RecipeList)">
+            <summary>
+            Save a recipe list to Json
+            </summary>
+            <param name="recipeList"></param>
+        </member>
+        <member name="M:RecipeBook.Recipes.SaveHelper.LoadRecipeListFromJson">
+            <summary>
+            Load a recipe list from json
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RecipeBook.Recipes.RecipeList.OnRecipeSelected(RecipeBook.Recipes.Recipe)">
+            <summary>
+            Navigate to a ViewRecipe page with the selected recipe
+            </summary>
+            <param name="recipe"></param>
+        </member>
+    </members>
+</doc>
