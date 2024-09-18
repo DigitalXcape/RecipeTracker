@@ -1,4 +1,5 @@
 ﻿using RecipeBook.Recipes;
+using System.Collections.ObjectModel;
 
 namespace RecipeBook
 {
@@ -32,6 +33,28 @@ namespace RecipeBook
                 // Navigate to the RecipeDetailPage, passing the selected recipe
                 Navigation.PushModalAsync(new ViewRecipe(tappedItem, RecipeBook));
                 SaveHelper.SaveRecipeListToJson(RecipeBook);
+            }
+        }
+
+        private void OnSwipeEnded(object sender, SwipeEndedEventArgs e)
+        {
+            // Check if the swipe direction was right
+            if (e.SwipeDirection == SwipeDirection.Left)
+            {
+                var swipeView = (SwipeView)sender;
+                var recipe = (Recipe)swipeView.BindingContext;
+
+                if (!recipe.Favorite)
+                {
+                    recipe.Favorite = true;
+                }
+                else
+                {
+                    recipe.Favorite = false;
+                }
+
+                SaveHelper.SaveRecipeListToJson(RecipeBook);
+                swipeView.Close();
             }
         }
 

@@ -9,6 +9,8 @@ namespace RecipeBook.Recipes
     [System.Serializable]
     public class RecipeList : INotifyPropertyChanged
     {
+        public string Theme;
+
         private ObservableCollection<Recipe> _recipes;
 
         public List<Recipe> StoredRecipes {  get; private set; }
@@ -23,6 +25,26 @@ namespace RecipeBook.Recipes
             }
         }
 
+        public ObservableCollection<Recipe> FavoriteRecipes
+        {
+            get
+            {
+                ObservableCollection<Recipe> result = new ObservableCollection<Recipe>();
+
+                foreach (Recipe item in _recipes)
+                {
+                    if (item.Favorite)
+                    {
+                        result.Add(item);
+                    }
+                }
+
+                OnPropertyChanged(nameof(FavoriteRecipes));
+
+                return result;
+            }
+        }
+
         public ICommand SelectRecipeCommand { get; private set; }
 
         public RecipeList()
@@ -33,6 +55,7 @@ namespace RecipeBook.Recipes
             };
 
             SelectRecipeCommand = new Command<Recipe>(OnRecipeSelected);
+            Theme = "Light";
         }
 
         /// <summary>

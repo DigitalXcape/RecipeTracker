@@ -8,15 +8,14 @@ public partial class EditRecipePage : ContentPage
 	public Recipe CurrentRecipe;
     public String mode;
 
-	public EditRecipePage(Recipe recipe, RecipeList recipeBook, String modeName)
+
+    public EditRecipePage(Recipe recipe, RecipeList recipeBook, String modeName)
 	{
 		InitializeComponent();
 
         BindingContext = recipe;
 
-        RecipeBook = recipeBook;
-		CurrentRecipe = recipe;
-        mode = modeName;
+        CurrentRecipe = recipe;
 
         lableMode.Text = mode;
         lableRecipeName.Text = "Recipe Name: " + recipe.Name;
@@ -106,5 +105,35 @@ public partial class EditRecipePage : ContentPage
     private void SaveRecipeList()
     {
         SaveHelper.SaveRecipeListToJson(RecipeBook);
+    }
+
+    private async void OnInstructionTapped(object sender, TappedEventArgs e)
+    {
+        // Get the selected recipe via the CommandParameter
+        var tappedItem = (sender as Element)?.BindingContext as Instruction;
+
+        if (tappedItem != null)
+        {
+            string result = await DisplayPromptAsync("Edit Instruction", tappedItem.Direction,
+                                                    placeholder: "", maxLength: 100);
+
+            tappedItem.Direction = result;
+            SaveRecipeList();
+        }
+    }
+
+    private async void OnIngredientTapped(object sender, TappedEventArgs e)
+    {
+        // Get the selected recipe via the CommandParameter
+        var tappedItem = (sender as Element)?.BindingContext as Ingredient;
+
+        if (tappedItem != null)
+        {
+            string result = await DisplayPromptAsync("Edit Ingredient", tappedItem.Name,
+                                                    placeholder: "", maxLength: 100);
+
+            tappedItem.Name = result;
+            SaveRecipeList();
+        }
     }
 }

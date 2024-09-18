@@ -14,9 +14,21 @@ namespace RecipeBook.Recipes
         private string _name;
         private string _description;
 
+        private bool _favorite;
+
         private ObservableCollection<Ingredient> _ingredients;
 
         private ObservableCollection<Instruction> _instructions;
+
+        public bool Favorite
+        {
+            get => _favorite;
+            set
+            {
+                _favorite = value;
+                OnPropertyChanged(nameof(Favorite));
+            }
+        }
 
         public string Name
         {

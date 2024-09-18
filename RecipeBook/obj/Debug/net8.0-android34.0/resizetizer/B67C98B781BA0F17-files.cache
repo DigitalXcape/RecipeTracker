@@ -1,5 +1,7 @@
-﻿obj\Debug\net8.0-android34.0\resizetizer\r\drawable\mainpage_coverimage.png
+﻿obj\Debug\net8.0-android34.0\resizetizer\r\drawable\favorite_icon.png
+obj\Debug\net8.0-android34.0\resizetizer\r\drawable\mainpage_coverimage.png
 obj\Debug\net8.0-android34.0\resizetizer\r\drawable\pencil_icon.png
+obj\Debug\net8.0-android34.0\resizetizer\r\drawable\unfavorite_icon.png
 obj\Debug\net8.0-android34.0\resizetizer\r\drawable-hdpi\dotnet_bot.png
 obj\Debug\net8.0-android34.0\resizetizer\r\drawable-mdpi\dotnet_bot.png
 obj\Debug\net8.0-android34.0\resizetizer\r\drawable-xhdpi\dotnet_bot.png

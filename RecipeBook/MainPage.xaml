@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RecipeBook.MainPage">
+             x:Class="RecipeBook.MainPage"
+             Title="">
 
     <ScrollView>
         <VerticalStackLayout
@@ -13,15 +14,44 @@
                 Aspect="AspectFit"
                 SemanticProperties.Description="Your recipes" />
 
+            <Picker
+                Title="Select Theme"
+                x:Name="ThemePicker"
+                SelectedIndexChanged="OnThemeSelected"
+                HorizontalOptions="Fill"
+                FontFamily="Pixel">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Light</x:String>
+                        <x:String>Dark</x:String>
+                        <x:String>Sky Blue</x:String>
+                        <x:String>Purple</x:String>
+                        <x:String>Red + Black</x:String>
+                        <x:String>Halloween</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
             <Button
-                x:Name="RecipeBtn"
+                x:Name="YourRecipesBtn"
                 Text="Your Recipes" 
                 SemanticProperties.Hint="Opens recipe page"
-                Clicked="btnRecipeClicked"
+                Clicked="btnYourRecipesClicked"
                 HorizontalOptions="Fill" 
                 FontSize="Medium"
                 FontFamily="Pixel"
                 />
+
+            <Button
+                x:Name="YourFavoriteRecipesBtn"
+                Text="Favorite Recipes" 
+                SemanticProperties.Hint="Opens recipe page"
+                Clicked="btnYourFavoriteRecipesClicked"
+                HorizontalOptions="Fill" 
+                FontSize="Medium"
+                FontFamily="Pixel"
+                />
+
         </VerticalStackLayout>
     </ScrollView>
 

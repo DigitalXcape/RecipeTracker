@@ -5,20 +5,28 @@
              x:Class="RecipeBook.RecipePage"
              x:Name="recipePage">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <vm:FavoriteIconConverter x:Key="FavoriteIconConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.BindingContext>
         <vm:RecipeList/>
     </ContentPage.BindingContext>
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
+            Padding="0,0"
             Spacing="25">
 
-            <Label
-                Text="Your Recipes"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" 
-                FontFamily="Pixel"/>
+            <Label x:Name="pageLabel"
+            Text="All Recipes"
+            FontSize="Large"
+            FontFamily="Pixel"
+            Margin="0,10,0,0"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
 
             <Button
                 x:Name="btnAdd"
@@ -27,40 +35,65 @@
                 Clicked="btnAddClicked"
                 HorizontalOptions="Fill" 
                 FontSize="Medium"
-                FontFamily="Pixel"/>
+                FontFamily="Pixel"
+                Margin="30,0,30,0"/>
 
-            <!-- CollectionView for displaying recipe buttons -->
             <CollectionView ItemsSource="{Binding Recipes}" IsEnabled="True" IsVisible="True">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame BorderColor="LightGray" Padding="10" Margin="5">
-                            <Frame.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnRecipeTapped" CommandParameter="{Binding .}" />
-                            </Frame.GestureRecognizers>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
+                        <SwipeView SwipeEnded="OnSwipeEnded">
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItem
+                IconImageSource="{Binding Favorite, Converter={StaticResource FavoriteIconConverter}}"
+                CommandParameter="{Binding .}" />
+                                </SwipeItems>
+                            </SwipeView.RightItems>
 
-                                <!-- Recipe Name Label -->
-                                <Label Text="{Binding Name}" 
-                           FontSize="Medium" 
-                           VerticalOptions="Center" 
-                           Grid.Column="0" 
-                           FontFamily="Pixel"
-                                       TextColor="Black"/>
+                            <Frame Padding="10" Margin="5">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnRecipeTapped" CommandParameter="{Binding .}" />
+                                </Frame.GestureRecognizers>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
 
-                                <!-- Delete Button -->
-                                <Button Text="Delete" 
-                            Clicked="OnDeleteRecipeClicked" 
-                            CommandParameter="{Binding .}" 
-                            Grid.Column="1" 
-                            WidthRequest="100"
-                            Margin="10, 0, 0, 0" 
-                            FontFamily="Pixel"/>
-                            </Grid>
-                        </Frame>
+                                    <!-- Recipe Name Label -->
+                                    <Label Text="{Binding Name}" 
+                                       FontSize="Medium" 
+                                       VerticalOptions="Center" 
+                                       Grid.Column="0" 
+                                       FontFamily="Pixel"/>
+
+                                    <!-- Favorite Icon -->
+                                    <Image Source="favorite_icon.png"
+                                        Grid.Column="1"
+                                        WidthRequest="40"
+                                        Aspect="AspectFit">
+                                        <Image.Triggers>
+                                            <DataTrigger TargetType="Image" Binding="{Binding Favorite}" Value="True">
+                                                <Setter Property="IsVisible" Value="True" />
+                                            </DataTrigger>
+                                            <DataTrigger TargetType="Image" Binding="{Binding Favorite}" Value="False">
+                                                <Setter Property="IsVisible" Value="False" />
+                                            </DataTrigger>
+                                        </Image.Triggers>
+                                    </Image>
+
+                                    <!-- Delete Button -->
+                                    <Button Text="Delete" 
+                                        Clicked="OnDeleteRecipeClicked" 
+                                        CommandParameter="{Binding .}" 
+                                        Grid.Column="2" 
+                                        WidthRequest="100"
+                                        Margin="10, 0, 0, 0" 
+                                        FontFamily="Pixel"/>
+                                </Grid>
+                            </Frame>
+                        </SwipeView>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

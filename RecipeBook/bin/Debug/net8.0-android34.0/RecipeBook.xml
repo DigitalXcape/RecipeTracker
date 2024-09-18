@@ -9,7 +9,7 @@
             Load the recipe list if available
             </summary>
         </member>
-        <member name="M:RecipeBook.MainPage.btnRecipeClicked(System.Object,System.EventArgs)">
+        <member name="M:RecipeBook.MainPage.btnYourRecipesClicked(System.Object,System.EventArgs)">
             <summary>
             Click event for the recipe list button
             </summary>
