@@ -20,6 +20,7 @@
     <Style TargetType="Picker">
         <Setter Property="BackgroundColor" Value="{StaticResource PrimaryBackgroundColor}" />
         <Setter Property="TextColor" Value="{StaticResource PrimaryTextColor}" />
+        <Setter Property="TitleColor" Value="{StaticResource PrimaryTextColor}" />
     </Style>
 
     <Style TargetType="ScrollView">
