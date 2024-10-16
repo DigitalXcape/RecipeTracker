@@ -4,22 +4,26 @@ namespace RecipeBook;
 
 public partial class EditRecipePage : ContentPage
 {
-	public RecipeList RecipeBook;
+	public RecipeList RecipeList;
 	public Recipe CurrentRecipe;
     public String mode;
 
 
-    public EditRecipePage(Recipe recipe, RecipeList recipeBook, String modeName)
-	{
-		InitializeComponent();
+    public EditRecipePage(Recipe recipe, RecipeList recipeBook, string modeName)
+    {
+        InitializeComponent();
 
-        BindingContext = recipe;
-
+        // Set the BindingContext and other properties
         CurrentRecipe = recipe;
+        RecipeList = recipeBook;
+        mode = modeName;
 
-        lableMode.Text = mode;
-        lableRecipeName.Text = "Recipe Name: " + recipe.Name;
-	}
+        BindingContext = CurrentRecipe;
+
+        // Update labels with the mode and recipe name
+        lableMode.Text = mode; // Display the mode (e.g., "Add Recipe" or "Edit Recipe")
+        lableRecipeName.Text = "Recipe Name: " + CurrentRecipe.Name;
+    }
 
     private async void OnAddIngredientClicked(object sender, EventArgs e)
     {
@@ -104,7 +108,7 @@ public partial class EditRecipePage : ContentPage
 
     private void SaveRecipeList()
     {
-        SaveHelper.SaveRecipeListToJson(RecipeBook);
+        SaveHelper.SaveRecipeListToJson(RecipeList);
     }
 
     private async void OnInstructionTapped(object sender, TappedEventArgs e)

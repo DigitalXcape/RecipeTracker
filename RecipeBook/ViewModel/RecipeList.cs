@@ -64,7 +64,7 @@ namespace RecipeBook.Recipes
         /// <param name="recipe"></param>
         private void OnRecipeSelected(Recipe recipe)
         {
-            Application.Current.MainPage.Navigation.PushAsync(new ViewRecipe(recipe, this));
+            Application.Current.MainPage.Navigation.PushAsync(new ViewRecipePage(recipe, this));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

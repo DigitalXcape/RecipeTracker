@@ -1,3 +1,0 @@
-C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\bin\Release\net8.0-android34.0\android-arm64\publish\com.companyname.recipebook-Signed.apk
-C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\bin\Release\net8.0-android34.0\android-arm64\publish\com.companyname.recipebook.apk
-C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\bin\Release\net8.0-android34.0\android-arm64\publish\_Microsoft.Android.Resource.Designer.dll

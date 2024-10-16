@@ -1,0 +1,244 @@
+2024-10-13 17:17:00.766 -05:00 [INF] Now listening on: https://localhost:7148
+2024-10-13 17:17:00.799 -05:00 [INF] Now listening on: http://localhost:5097
+2024-10-13 17:17:00.852 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-13 17:17:00.852 -05:00 [INF] Hosting environment: Development
+2024-10-13 17:17:00.852 -05:00 [INF] Content root path: C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeAPI
+2024-10-13 17:17:01.867 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - null null
+2024-10-13 17:17:02.094 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - 200 null text/html;charset=utf-8 231.8955ms
+2024-10-13 17:17:02.193 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 17:17:02.200 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 7.2161ms
+2024-10-13 17:17:02.982 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - null null
+2024-10-13 17:17:04.779 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1797.2651ms
+2024-10-13 17:17:04.814 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - null null
+2024-10-13 17:17:04.863 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Recipe/{id}" for actions - RecipeAPI.Controllers.RecipeController.MakeRecipeFavoriteById (RecipeAPI),RecipeAPI.Controllers.RecipeController.RemoveRecipeFavoriteById (RecipeAPI). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-10-13 17:17:04.916 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 101.8117ms
+2024-10-13 17:17:18.589 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - null null
+2024-10-13 17:17:18.598 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - 200 null text/html;charset=utf-8 9.7309ms
+2024-10-13 17:17:18.631 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 17:17:18.631 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - null null
+2024-10-13 17:17:18.632 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 1.4432ms
+2024-10-13 17:17:18.644 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.9992ms
+2024-10-13 17:17:18.725 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - null null
+2024-10-13 17:17:18.727 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Recipe/{id}" for actions - RecipeAPI.Controllers.RecipeController.MakeRecipeFavoriteById (RecipeAPI),RecipeAPI.Controllers.RecipeController.RemoveRecipeFavoriteById (RecipeAPI). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-10-13 17:17:18.728 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 3.4857ms
+2024-10-13 17:19:31.300 -05:00 [INF] Now listening on: https://localhost:7148
+2024-10-13 17:19:31.321 -05:00 [INF] Now listening on: http://localhost:5097
+2024-10-13 17:19:31.372 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-13 17:19:31.373 -05:00 [INF] Hosting environment: Development
+2024-10-13 17:19:31.373 -05:00 [INF] Content root path: C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeAPI
+2024-10-13 17:19:31.822 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - null null
+2024-10-13 17:19:31.976 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - 200 null text/html;charset=utf-8 157.0999ms
+2024-10-13 17:19:32.048 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 17:19:32.048 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - null null
+2024-10-13 17:19:32.056 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 7.7815ms
+2024-10-13 17:19:32.093 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.2926ms
+2024-10-13 17:19:32.295 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - null null
+2024-10-13 17:19:32.372 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - RecipeAPI.Controllers.RecipeController.RemoveRecipeFavoriteById (RecipeAPI). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-10-13 17:19:32.400 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 105.3041ms
+2024-10-13 17:20:16.394 -05:00 [INF] Now listening on: https://localhost:7148
+2024-10-13 17:20:16.419 -05:00 [INF] Now listening on: http://localhost:5097
+2024-10-13 17:20:16.452 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-13 17:20:16.453 -05:00 [INF] Hosting environment: Development
+2024-10-13 17:20:16.453 -05:00 [INF] Content root path: C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeAPI
+2024-10-13 17:20:16.857 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - null null
+2024-10-13 17:20:17.011 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - 200 null text/html;charset=utf-8 156.8487ms
+2024-10-13 17:20:17.096 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - null null
+2024-10-13 17:20:17.096 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 17:20:17.104 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 7.4996ms
+2024-10-13 17:20:17.189 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 92.9485ms
+2024-10-13 17:20:17.391 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - null null
+2024-10-13 17:20:17.478 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.9317ms
+2024-10-13 17:21:32.529 -05:00 [INF] Now listening on: https://localhost:7148
+2024-10-13 17:21:32.563 -05:00 [INF] Now listening on: http://localhost:5097
+2024-10-13 17:21:32.612 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-13 17:21:32.613 -05:00 [INF] Hosting environment: Development
+2024-10-13 17:21:32.613 -05:00 [INF] Content root path: C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeAPI
+2024-10-13 17:21:33.003 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - null null
+2024-10-13 17:21:33.164 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - 200 null text/html;charset=utf-8 166.2226ms
+2024-10-13 17:21:33.256 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - null null
+2024-10-13 17:21:33.256 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 17:21:33.261 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 5.8023ms
+2024-10-13 17:21:33.292 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.6205ms
+2024-10-13 17:21:33.457 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - null null
+2024-10-13 17:21:33.551 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 94.153ms
+2024-10-13 17:22:23.183 -05:00 [INF] Now listening on: https://localhost:7148
+2024-10-13 17:22:23.207 -05:00 [INF] Now listening on: http://localhost:5097
+2024-10-13 17:22:23.253 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-13 17:22:23.254 -05:00 [INF] Hosting environment: Development
+2024-10-13 17:22:23.254 -05:00 [INF] Content root path: C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeAPI
+2024-10-13 17:22:23.698 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - null null
+2024-10-13 17:22:23.851 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - 200 null text/html;charset=utf-8 157.4445ms
+2024-10-13 17:22:23.924 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - null null
+2024-10-13 17:22:23.924 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 17:22:23.929 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 5.4761ms
+2024-10-13 17:22:23.960 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.3697ms
+2024-10-13 17:22:24.155 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - null null
+2024-10-13 17:22:24.210 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Recipe" for actions - RecipeAPI.Controllers.RecipeController.AddRecipe (RecipeAPI),RecipeAPI.Controllers.RecipeController.MakeRecipeFavoriteById (RecipeAPI),RecipeAPI.Controllers.RecipeController.RemoveRecipeFavoriteById (RecipeAPI). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-10-13 17:22:24.240 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 85.7301ms
+2024-10-13 17:23:11.351 -05:00 [INF] Now listening on: https://localhost:7148
+2024-10-13 17:23:11.374 -05:00 [INF] Now listening on: http://localhost:5097
+2024-10-13 17:23:11.417 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-13 17:23:11.418 -05:00 [INF] Hosting environment: Development
+2024-10-13 17:23:11.418 -05:00 [INF] Content root path: C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeAPI
+2024-10-13 17:23:11.924 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - null null
+2024-10-13 17:23:12.083 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - 200 null text/html;charset=utf-8 162.2235ms
+2024-10-13 17:23:12.178 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 17:23:12.178 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - null null
+2024-10-13 17:23:12.183 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 5.5512ms
+2024-10-13 17:23:12.219 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.558ms
+2024-10-13 17:23:12.417 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - null null
+2024-10-13 17:23:12.467 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Recipe" for actions - RecipeAPI.Controllers.RecipeController.AddRecipe (RecipeAPI),RecipeAPI.Controllers.RecipeController.MakeRecipeFavoriteById (RecipeAPI),RecipeAPI.Controllers.RecipeController.RemoveRecipeFavoriteById (RecipeAPI). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-10-13 17:23:12.493 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 76.7618ms
+2024-10-13 17:24:28.379 -05:00 [INF] Now listening on: https://localhost:7148
+2024-10-13 17:24:28.398 -05:00 [INF] Now listening on: http://localhost:5097
+2024-10-13 17:24:28.428 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-13 17:24:28.428 -05:00 [INF] Hosting environment: Development
+2024-10-13 17:24:28.428 -05:00 [INF] Content root path: C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeAPI
+2024-10-13 17:24:30.497 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - null null
+2024-10-13 17:24:30.676 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - 200 null text/html;charset=utf-8 184.1246ms
+2024-10-13 17:24:30.746 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 17:24:30.746 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - null null
+2024-10-13 17:24:30.752 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 5.6808ms
+2024-10-13 17:24:30.786 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.2977ms
+2024-10-13 17:24:30.955 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - null null
+2024-10-13 17:24:31.058 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 102.732ms
+2024-10-13 17:24:51.602 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7148/api/Recipe/favorite/daec3a84-32b0-41f7-946b-3e4c81b9a5ae - null 0
+2024-10-13 17:24:51.607 -05:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.MakeRecipeFavoriteById (RecipeAPI)'
+2024-10-13 17:24:51.624 -05:00 [INF] Route matched with {action = "MakeRecipeFavoriteById", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecipeAPI.Models.Recipe]] MakeRecipeFavoriteById(System.Guid) on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-10-13 17:24:51.775 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-10-13 17:24:51.777 -05:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.MakeRecipeFavoriteById (RecipeAPI) in 151.3564ms
+2024-10-13 17:24:51.778 -05:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.MakeRecipeFavoriteById (RecipeAPI)'
+2024-10-13 17:24:51.778 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7148/api/Recipe/favorite/daec3a84-32b0-41f7-946b-3e4c81b9a5ae - 200 0 null 176.5262ms
+2024-10-13 17:25:13.797 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7148/api/Recipe/unfavorite/daec3a84-32b0-41f7-946b-3e4c81b9a5ae - null 0
+2024-10-13 17:25:13.800 -05:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.RemoveRecipeFavoriteById (RecipeAPI)'
+2024-10-13 17:25:13.804 -05:00 [INF] Route matched with {action = "RemoveRecipeFavoriteById", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecipeAPI.Models.Recipe]] RemoveRecipeFavoriteById(System.Guid) on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-10-13 17:25:13.810 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-10-13 17:25:13.812 -05:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.RemoveRecipeFavoriteById (RecipeAPI) in 8.0525ms
+2024-10-13 17:25:13.813 -05:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.RemoveRecipeFavoriteById (RecipeAPI)'
+2024-10-13 17:25:13.813 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7148/api/Recipe/unfavorite/daec3a84-32b0-41f7-946b-3e4c81b9a5ae - 200 0 null 16.0574ms
+2024-10-13 17:25:15.116 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7148/api/Recipe/unfavorite/daec3a84-32b0-41f7-946b-3e4c81b9a5ae - null 0
+2024-10-13 17:25:15.116 -05:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.RemoveRecipeFavoriteById (RecipeAPI)'
+2024-10-13 17:25:15.116 -05:00 [INF] Route matched with {action = "RemoveRecipeFavoriteById", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecipeAPI.Models.Recipe]] RemoveRecipeFavoriteById(System.Guid) on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-10-13 17:25:15.185 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-10-13 17:25:15.186 -05:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.RemoveRecipeFavoriteById (RecipeAPI) in 69.5405ms
+2024-10-13 17:25:15.186 -05:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.RemoveRecipeFavoriteById (RecipeAPI)'
+2024-10-13 17:25:15.186 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7148/api/Recipe/unfavorite/daec3a84-32b0-41f7-946b-3e4c81b9a5ae - 400 null text/plain; charset=utf-8 70.6113ms
+2024-10-13 17:25:29.654 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7148/api/Recipe/favorite/daec3a84-32b0-41f7-946b-3e4c81b9a5ae - null 0
+2024-10-13 17:25:29.655 -05:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.MakeRecipeFavoriteById (RecipeAPI)'
+2024-10-13 17:25:29.655 -05:00 [INF] Route matched with {action = "MakeRecipeFavoriteById", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecipeAPI.Models.Recipe]] MakeRecipeFavoriteById(System.Guid) on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-10-13 17:25:29.660 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-10-13 17:25:29.661 -05:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.MakeRecipeFavoriteById (RecipeAPI) in 5.676ms
+2024-10-13 17:25:29.661 -05:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.MakeRecipeFavoriteById (RecipeAPI)'
+2024-10-13 17:25:29.661 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7148/api/Recipe/favorite/daec3a84-32b0-41f7-946b-3e4c81b9a5ae - 200 0 null 6.741ms
+2024-10-13 17:25:36.307 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7148/api/Recipe/unfavorite/daec3a84-32b0-41f7-946b-3e4c81b9a5ae - null 0
+2024-10-13 17:25:36.308 -05:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.RemoveRecipeFavoriteById (RecipeAPI)'
+2024-10-13 17:25:36.308 -05:00 [INF] Route matched with {action = "RemoveRecipeFavoriteById", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecipeAPI.Models.Recipe]] RemoveRecipeFavoriteById(System.Guid) on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-10-13 17:25:36.312 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-10-13 17:25:36.312 -05:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.RemoveRecipeFavoriteById (RecipeAPI) in 4.4362ms
+2024-10-13 17:25:36.312 -05:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.RemoveRecipeFavoriteById (RecipeAPI)'
+2024-10-13 17:25:36.313 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7148/api/Recipe/unfavorite/daec3a84-32b0-41f7-946b-3e4c81b9a5ae - 200 0 null 5.7993ms
+2024-10-13 17:46:54.803 -05:00 [INF] Now listening on: https://localhost:7148
+2024-10-13 17:46:54.821 -05:00 [INF] Now listening on: http://localhost:5097
+2024-10-13 17:46:54.851 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-13 17:46:54.852 -05:00 [INF] Hosting environment: Development
+2024-10-13 17:46:54.852 -05:00 [INF] Content root path: C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeAPI
+2024-10-13 17:46:57.035 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - null null
+2024-10-13 17:46:57.202 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - 200 null text/html;charset=utf-8 172.5236ms
+2024-10-13 17:46:57.286 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - null null
+2024-10-13 17:46:57.286 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 17:46:57.292 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 5.3361ms
+2024-10-13 17:46:57.324 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.5655ms
+2024-10-13 17:46:57.503 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - null null
+2024-10-13 17:46:57.629 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 126.1535ms
+2024-10-13 17:48:20.955 -05:00 [INF] Now listening on: https://localhost:7148
+2024-10-13 17:48:20.978 -05:00 [INF] Now listening on: http://localhost:5097
+2024-10-13 17:48:21.013 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-13 17:48:21.013 -05:00 [INF] Hosting environment: Development
+2024-10-13 17:48:21.013 -05:00 [INF] Content root path: C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeAPI
+2024-10-13 17:48:21.323 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - null null
+2024-10-13 17:48:21.489 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - 200 null text/html;charset=utf-8 172.0053ms
+2024-10-13 17:48:21.573 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - null null
+2024-10-13 17:48:21.573 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 17:48:21.581 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 8.0936ms
+2024-10-13 17:48:21.609 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.9764ms
+2024-10-13 17:48:21.784 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - null null
+2024-10-13 17:48:21.887 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 105.2178ms
+2024-10-13 17:48:34.075 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/api/Category/94ec6b58-01bb-40a8-b1be-6741d15c87d5 - null null
+2024-10-13 17:48:34.079 -05:00 [INF] Executing endpoint 'RecipeAPI.Controllers.CategoryController.GetCategoryById (RecipeAPI)'
+2024-10-13 17:48:34.092 -05:00 [INF] Route matched with {action = "GetCategoryById", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecipeAPI.Models.Category]] GetCategoryById(System.Guid) on controller RecipeAPI.Controllers.CategoryController (RecipeAPI).
+2024-10-13 17:50:39.253 -05:00 [INF] Now listening on: https://localhost:7148
+2024-10-13 17:50:39.279 -05:00 [INF] Now listening on: http://localhost:5097
+2024-10-13 17:50:39.316 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-13 17:50:39.317 -05:00 [INF] Hosting environment: Development
+2024-10-13 17:50:39.317 -05:00 [INF] Content root path: C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeAPI
+2024-10-13 17:50:40.200 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - null null
+2024-10-13 17:50:40.340 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - 200 null text/html;charset=utf-8 142.5734ms
+2024-10-13 17:50:40.460 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 17:50:40.460 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - null null
+2024-10-13 17:50:40.464 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.4887ms
+2024-10-13 17:50:40.493 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.7902ms
+2024-10-13 17:50:40.676 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - null null
+2024-10-13 17:50:40.772 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 96.2032ms
+2024-10-13 17:51:01.475 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/api/Category/94ec6b58-01bb-40a8-b1be-6741d15c87d5 - null null
+2024-10-13 17:51:01.480 -05:00 [INF] Executing endpoint 'RecipeAPI.Controllers.CategoryController.GetCategoryById (RecipeAPI)'
+2024-10-13 17:51:01.493 -05:00 [INF] Route matched with {action = "GetCategoryById", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecipeAPI.Models.Category]] GetCategoryById(System.Guid) on controller RecipeAPI.Controllers.CategoryController (RecipeAPI).
+2024-10-13 17:54:12.035 -05:00 [INF] Now listening on: https://localhost:7148
+2024-10-13 17:54:12.058 -05:00 [INF] Now listening on: http://localhost:5097
+2024-10-13 17:54:12.088 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-13 17:54:12.088 -05:00 [INF] Hosting environment: Development
+2024-10-13 17:54:12.088 -05:00 [INF] Content root path: C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeAPI
+2024-10-13 17:54:14.229 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - null null
+2024-10-13 17:54:14.397 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - 200 null text/html;charset=utf-8 171.1045ms
+2024-10-13 17:54:14.478 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-13 17:54:14.478 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - null null
+2024-10-13 17:54:14.493 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 15.0961ms
+2024-10-13 17:54:14.529 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.2381ms
+2024-10-13 17:54:14.715 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - null null
+2024-10-13 17:54:14.821 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 106.1768ms
+2024-10-13 17:54:26.420 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/api/Category/94ec6b58-01bb-40a8-b1be-6741d15c87d5 - null null
+2024-10-13 17:54:26.424 -05:00 [INF] Executing endpoint 'RecipeAPI.Controllers.CategoryController.GetCategoryById (RecipeAPI)'
+2024-10-13 17:54:26.437 -05:00 [INF] Route matched with {action = "GetCategoryById", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecipeAPI.Models.Category]] GetCategoryById(System.Guid) on controller RecipeAPI.Controllers.CategoryController (RecipeAPI).
+2024-10-13 17:54:26.542 -05:00 [INF] Executing OkObjectResult, writing value of type 'RecipeAPI.Models.Category'.
+2024-10-13 17:54:26.549 -05:00 [INF] Executed action RecipeAPI.Controllers.CategoryController.GetCategoryById (RecipeAPI) in 108.5067ms
+2024-10-13 17:54:26.549 -05:00 [INF] Executed endpoint 'RecipeAPI.Controllers.CategoryController.GetCategoryById (RecipeAPI)'
+2024-10-13 17:54:26.549 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/api/Category/94ec6b58-01bb-40a8-b1be-6741d15c87d5 - 200 null application/json; charset=utf-8 130.4654ms

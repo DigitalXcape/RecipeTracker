@@ -19,7 +19,8 @@
                 x:Name="ThemePicker"
                 SelectedIndexChanged="OnThemeSelected"
                 HorizontalOptions="Fill"
-                FontFamily="Pixel">
+                FontFamily="Pixel"
+                BackgroundColor="White">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>Light</x:String>

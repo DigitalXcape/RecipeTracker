@@ -1,0 +1,109 @@
+2024-10-12 13:47:45.537 -05:00 [INF] Now listening on: https://localhost:7148
+2024-10-12 13:47:45.558 -05:00 [INF] Now listening on: http://localhost:5097
+2024-10-12 13:47:45.590 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-12 13:47:45.591 -05:00 [INF] Hosting environment: Development
+2024-10-12 13:47:45.591 -05:00 [INF] Content root path: C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeAPI
+2024-10-12 13:47:47.599 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger - null null
+2024-10-12 13:47:47.863 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger - 301 0 null 270.0754ms
+2024-10-12 13:47:47.881 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - null null
+2024-10-12 13:47:47.981 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - 200 null text/html;charset=utf-8 100.4248ms
+2024-10-12 13:47:48.061 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/swagger-ui.css - null null
+2024-10-12 13:47:48.061 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/swagger-ui-bundle.js - null null
+2024-10-12 13:47:48.061 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-12 13:47:48.062 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/swagger-ui-standalone-preset.js - null null
+2024-10-12 13:47:48.062 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - null null
+2024-10-12 13:47:48.085 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 23.0699ms
+2024-10-12 13:47:48.129 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-10-12 13:47:48.129 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-10-12 13:47:48.130 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 68.1955ms
+2024-10-12 13:47:48.130 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/swagger-ui.css - 200 143943 text/css 68.5755ms
+2024-10-12 13:47:48.142 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-10-12 13:47:48.142 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 80.8941ms
+2024-10-12 13:47:48.177 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 114.6776ms
+2024-10-12 13:47:48.430 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - null null
+2024-10-12 13:47:48.461 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/favicon-32x32.png - null null
+2024-10-12 13:47:48.462 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-10-12 13:47:48.462 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/favicon-32x32.png - 200 628 image/png 1.2605ms
+2024-10-12 13:47:48.595 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 164.7065ms
+2024-10-12 13:48:06.019 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/api/Recipe - null null
+2024-10-12 13:48:06.023 -05:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-10-12 13:48:06.034 -05:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecipeAPI.Models.Recipe]]] GetRecipes() on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-10-12 13:48:06.186 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RecipeAPI.Models.Recipe, RecipeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-12 13:48:06.195 -05:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI) in 159.4085ms
+2024-10-12 13:48:06.196 -05:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-10-12 13:48:06.196 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/api/Recipe - 200 null application/json; charset=utf-8 177.4257ms
+2024-10-12 13:48:33.653 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/api/Recipe/7e3c6e12-ff3c-44ec-b116-cb1c4a94d409 - null null
+2024-10-12 13:48:33.658 -05:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipeById (RecipeAPI)'
+2024-10-12 13:48:33.663 -05:00 [INF] Route matched with {action = "GetRecipeById", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecipeAPI.Models.Recipe]] GetRecipeById(System.Guid) on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-10-12 13:48:33.707 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-10-12 13:48:33.708 -05:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipeById (RecipeAPI) in 44.4328ms
+2024-10-12 13:48:33.708 -05:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipeById (RecipeAPI)'
+2024-10-12 13:48:33.708 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/api/Recipe/7e3c6e12-ff3c-44ec-b116-cb1c4a94d409 - 400 null text/plain; charset=utf-8 55.1286ms
+2024-10-12 13:48:34.784 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/api/Recipe/7e3c6e12-ff3c-44ec-b116-cb1c4a94d409 - null null
+2024-10-12 13:48:34.784 -05:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipeById (RecipeAPI)'
+2024-10-12 13:48:34.784 -05:00 [INF] Route matched with {action = "GetRecipeById", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecipeAPI.Models.Recipe]] GetRecipeById(System.Guid) on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-10-12 13:48:34.801 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-10-12 13:48:34.801 -05:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipeById (RecipeAPI) in 16.2576ms
+2024-10-12 13:48:34.801 -05:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipeById (RecipeAPI)'
+2024-10-12 13:48:34.801 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/api/Recipe/7e3c6e12-ff3c-44ec-b116-cb1c4a94d409 - 400 null text/plain; charset=utf-8 17.3776ms
+2024-10-12 13:48:35.516 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/api/Recipe/7e3c6e12-ff3c-44ec-b116-cb1c4a94d409 - null null
+2024-10-12 13:48:35.516 -05:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipeById (RecipeAPI)'
+2024-10-12 13:48:35.516 -05:00 [INF] Route matched with {action = "GetRecipeById", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecipeAPI.Models.Recipe]] GetRecipeById(System.Guid) on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-10-12 13:48:35.530 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-10-12 13:48:35.530 -05:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipeById (RecipeAPI) in 13.7938ms
+2024-10-12 13:48:35.530 -05:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipeById (RecipeAPI)'
+2024-10-12 13:48:35.530 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/api/Recipe/7e3c6e12-ff3c-44ec-b116-cb1c4a94d409 - 400 null text/plain; charset=utf-8 14.7731ms
+2024-10-12 13:48:40.185 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/api/Recipe/7e3c6e12-ff3c-44ec-b116-cb1c4a94d409 - null null
+2024-10-12 13:48:40.185 -05:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipeById (RecipeAPI)'
+2024-10-12 13:48:40.185 -05:00 [INF] Route matched with {action = "GetRecipeById", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecipeAPI.Models.Recipe]] GetRecipeById(System.Guid) on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-10-12 13:48:40.200 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-10-12 13:48:40.200 -05:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipeById (RecipeAPI) in 14.9572ms
+2024-10-12 13:48:40.200 -05:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipeById (RecipeAPI)'
+2024-10-12 13:48:40.200 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/api/Recipe/7e3c6e12-ff3c-44ec-b116-cb1c4a94d409 - 400 null text/plain; charset=utf-8 15.5772ms
+2024-10-12 13:59:43.792 -05:00 [INF] Now listening on: https://localhost:7148
+2024-10-12 13:59:43.812 -05:00 [INF] Now listening on: http://localhost:5097
+2024-10-12 13:59:43.851 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-12 13:59:43.851 -05:00 [INF] Hosting environment: Development
+2024-10-12 13:59:43.851 -05:00 [INF] Content root path: C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeAPI
+2024-10-12 13:59:45.612 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - null null
+2024-10-12 13:59:45.705 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-12 13:59:45.722 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 16.0372ms
+2024-10-12 13:59:45.741 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - null null
+2024-10-12 13:59:45.797 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.8389ms
+2024-10-12 13:59:45.819 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - 200 null text/html;charset=utf-8 212.5137ms
+2024-10-12 13:59:45.912 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - null null
+2024-10-12 13:59:45.912 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-12 13:59:45.913 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 1.6226ms
+2024-10-12 13:59:45.934 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.1422ms
+2024-10-12 13:59:46.240 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - null null
+2024-10-12 13:59:46.357 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - null null
+2024-10-12 13:59:46.359 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 119.6271ms
+2024-10-12 13:59:46.363 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.0102ms
+2024-10-12 14:01:27.453 -05:00 [INF] Request starting HTTP/2 PUT https://localhost:7148/api/Recipe/7e3c6e12-ff3c-44ec-b116-cb1c4a94d409 - application/json 178
+2024-10-12 14:01:27.456 -05:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.UpdateRecipe (RecipeAPI)'
+2024-10-12 14:01:27.471 -05:00 [INF] Route matched with {action = "UpdateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecipeAPI.Models.Recipe]] UpdateRecipe(System.Guid, RecipeAPI.Models.Recipe) on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-10-12 14:01:27.533 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-10-12 14:01:27.536 -05:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.UpdateRecipe (RecipeAPI) in 62.9166ms
+2024-10-12 14:01:27.536 -05:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.UpdateRecipe (RecipeAPI)'
+2024-10-12 14:01:27.536 -05:00 [INF] Request finished HTTP/2 PUT https://localhost:7148/api/Recipe/7e3c6e12-ff3c-44ec-b116-cb1c4a94d409 - 400 null text/plain; charset=utf-8 83.4118ms
+2024-10-12 14:08:08.784 -05:00 [INF] Now listening on: https://localhost:7148
+2024-10-12 14:08:08.806 -05:00 [INF] Now listening on: http://localhost:5097
+2024-10-12 14:08:08.852 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-12 14:08:08.853 -05:00 [INF] Hosting environment: Development
+2024-10-12 14:08:08.853 -05:00 [INF] Content root path: C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeAPI
+2024-10-12 14:08:09.329 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/index.html - null null
+2024-10-12 14:08:09.501 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/index.html - 200 null text/html;charset=utf-8 177.6315ms
+2024-10-12 14:08:09.574 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-12 14:08:09.579 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 5.7096ms
+2024-10-12 14:08:09.600 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/_vs/browserLink - null null
+2024-10-12 14:08:09.640 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.8075ms
+2024-10-12 14:08:09.754 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - null null
+2024-10-12 14:08:09.847 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7148/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 92.9271ms
+2024-10-12 14:09:09.640 -05:00 [INF] Request starting HTTP/2 PUT https://localhost:7148/api/Recipe/7e3c6e12-ff3c-44ec-b116-cb1c4a94d409 - application/json 137
+2024-10-12 14:09:09.648 -05:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.UpdateRecipe (RecipeAPI)'
+2024-10-12 14:09:09.667 -05:00 [INF] Route matched with {action = "UpdateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecipeAPI.Models.Recipe]] UpdateRecipe(System.Guid, RecipeAPI.Models.Recipe) on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-10-12 14:09:09.805 -05:00 [INF] Successfully updated recipe with Id "7e3c6e12-ff3c-44ec-b116-cb1c4a94d409".
+2024-10-12 14:09:09.811 -05:00 [INF] Executing OkObjectResult, writing value of type 'RecipeAPI.Models.Recipe'.
+2024-10-12 14:09:09.818 -05:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.UpdateRecipe (RecipeAPI) in 147.6848ms
+2024-10-12 14:09:09.818 -05:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.UpdateRecipe (RecipeAPI)'
+2024-10-12 14:09:09.819 -05:00 [INF] Request finished HTTP/2 PUT https://localhost:7148/api/Recipe/7e3c6e12-ff3c-44ec-b116-cb1c4a94d409 - 200 null application/json; charset=utf-8 178.7468ms

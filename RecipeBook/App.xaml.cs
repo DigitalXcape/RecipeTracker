@@ -7,8 +7,11 @@ namespace RecipeBook
 {
     public partial class App : Application
     {
+        public static IServiceProvider ServiceProvider { get; private set; }
+
         public App()
         {
+
             InitializeComponent();
 
             MainPage = new AppShell();
@@ -32,7 +35,12 @@ namespace RecipeBook
             SetTheme(savedTheme);
         }
 
-        
+        public static void SetServiceProvider(IServiceProvider serviceProvider)
+        {
+            ServiceProvider = serviceProvider; // Store the service provider for global access
+        }
+
+
         public void SetTheme(string theme)
         {
             // Clear the existing theme-specific resource dictionaries

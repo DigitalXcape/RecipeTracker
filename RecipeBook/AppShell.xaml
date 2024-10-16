@@ -12,4 +12,13 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
+    <ShellContent
+        Title="Your Recipes"
+        ContentTemplate="{DataTemplate local:RecipePage}"
+        Route="RecipePage" />
+
+    <ShellContent
+        Title="Favorites"
+        ContentTemplate="{DataTemplate local:FavoritesPage}"
+        Route="FavoritesPage" />
 </Shell>

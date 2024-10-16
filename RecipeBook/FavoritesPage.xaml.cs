@@ -25,7 +25,7 @@ public partial class FavoritesPage : ContentPage
         if (tappedItem != null)
         {
             // Navigate to the RecipeDetailPage, passing the selected recipe
-            Navigation.PushModalAsync(new ViewRecipe(tappedItem, RecipeBook));
+            Navigation.PushModalAsync(new ViewRecipePage(tappedItem, RecipeBook));
             SaveHelper.SaveRecipeListToJson(RecipeBook);
         }
     }

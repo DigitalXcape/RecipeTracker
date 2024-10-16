@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using RecipeBook.Recipes;
 
 namespace RecipeBook
 {
@@ -16,10 +17,21 @@ namespace RecipeBook
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+        builder.Logging.AddDebug();
 #endif
 
-            return builder.Build();
+            builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddTransient<EditRecipePage>();
+            builder.Services.AddSingleton<FavoritesPage>();
+            builder.Services.AddSingleton<RecipePage>();
+            builder.Services.AddTransient<ViewRecipePage>();
+            builder.Services.AddSingleton<RecipeList>();
+
+            // Build the app and set the service provider
+            var mauiApp = builder.Build();
+            App.SetServiceProvider(builder.Services.BuildServiceProvider()); // Store the service provider
+
+            return mauiApp;
         }
     }
 }

@@ -1,0 +1,9 @@
+[
+  {
+    "Id": "7e3c6e12-ff3c-44ec-b116-cb1c4a94d409",
+    "Name": "MyFavoriteRecipe",
+    "Description": "test",
+    "TimeToMake": 40.0,
+    "ImageURl": "noimagehere"
+  }
+]

@@ -6,9 +6,12 @@ namespace RecipeBook
     {
         public RecipeList RecipeList { get; private set; }
 
-        public MainPage()
+        public MainPage(RecipeList recipeList)
         {
             InitializeComponent();
+
+            RecipeList = recipeList;
+
             LoadRecipeList();
         }
 
@@ -34,13 +37,12 @@ namespace RecipeBook
         /// <param name="e"></param>
         private async void btnYourRecipesClicked(object sender, EventArgs e)
         {
-            // Pass the loaded or newly created RecipeList to the RecipePage
-            await Navigation.PushModalAsync(new RecipePage(RecipeList));
+            await Shell.Current.GoToAsync("//RecipePage");
         }
 
         private async void btnYourFavoriteRecipesClicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new FavoritesPage(RecipeList));
+            await Shell.Current.GoToAsync("//FavoritesPage");
         }
 
         private void OnThemeSelected(object sender, EventArgs e)

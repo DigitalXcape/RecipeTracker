@@ -14,6 +14,9 @@
     <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
     <PlatformTarget>arm64</PlatformTarget>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
   <ItemGroup>
     <MauiXaml Update="EditRecipePage.xaml">
       <SubType>Designer</SubType>
@@ -42,7 +45,7 @@
     <MauiXaml Update="Themes\SkyBlueTheme.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="ViewRecipe.xaml">
+    <MauiXaml Update="ViewRecipePage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

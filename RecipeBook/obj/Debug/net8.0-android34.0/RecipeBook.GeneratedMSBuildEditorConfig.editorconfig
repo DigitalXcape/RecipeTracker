@@ -100,8 +100,8 @@ build_metadata.AdditionalFiles.ManifestResourceName = RecipeBook.Themes.SkyBlueT
 build_metadata.AdditionalFiles.TargetPath = Themes\SkyBlueTheme.xaml
 build_metadata.AdditionalFiles.RelativePath = Themes\SkyBlueTheme.xaml
 
-[C:/Users/kodyp/OneDrive/Desktop/schoolstuff/MobileDev/RecipeBook/ViewRecipe.xaml]
+[C:/Users/kodyp/OneDrive/Desktop/schoolstuff/MobileDev/RecipeBook/ViewRecipePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = RecipeBook.ViewRecipe.xaml
-build_metadata.AdditionalFiles.TargetPath = ViewRecipe.xaml
-build_metadata.AdditionalFiles.RelativePath = ViewRecipe.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RecipeBook.ViewRecipePage.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewRecipePage.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewRecipePage.xaml

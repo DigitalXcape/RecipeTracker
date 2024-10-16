@@ -7,22 +7,20 @@ namespace RecipeBook
     {
         int count = 0;
 
-        public RecipeList RecipeBook;
+        public RecipeList RecipeList;
 
         public RecipePage(RecipeList recipeList)
         {
             InitializeComponent();
 
-            if (RecipeBook == null)
+            if (RecipeList == null)
             {
-                RecipeBook = recipeList;
+                RecipeList = recipeList;
             }
 
-            BindingContext = RecipeBook;
+            BindingContext = RecipeList;
         }
 
-        // This method is called when a recipe is selected from the CollectionView
-        // This method is called when an item is tapped
         private async void OnRecipeTapped(object sender, EventArgs e)
         {
             // Get the selected recipe via the CommandParameter
@@ -30,9 +28,11 @@ namespace RecipeBook
 
             if (tappedItem != null)
             {
-                // Navigate to the RecipeDetailPage, passing the selected recipe
-                Navigation.PushModalAsync(new ViewRecipe(tappedItem, RecipeBook));
-                SaveHelper.SaveRecipeListToJson(RecipeBook);
+                // Create an instance of ViewRecipePage, passing the tapped recipe and RecipeBook
+                var viewRecipePage = (ViewRecipePage)Activator.CreateInstance(typeof(ViewRecipePage), tappedItem, RecipeList);
+
+                // Navigate to the ViewRecipePage
+                await Navigation.PushAsync(viewRecipePage);
             }
         }
 
@@ -53,17 +53,27 @@ namespace RecipeBook
                     recipe.Favorite = false;
                 }
 
-                SaveHelper.SaveRecipeListToJson(RecipeBook);
+                SaveHelper.SaveRecipeListToJson(RecipeList);
                 swipeView.Close();
             }
         }
 
         private async void btnAddClicked(object sender, EventArgs e)
         {
+            // Create a new recipe
             Recipe newRecipe = new Recipe("New Recipe");
-            RecipeBook.Recipes.Add(newRecipe);
-            Navigation.PushModalAsync(new EditRecipePage(newRecipe, RecipeBook, "Add Recipe"));
-            SaveHelper.SaveRecipeListToJson(RecipeBook);
+
+            // Add the new recipe to the RecipeList
+            RecipeList.Recipes.Add(newRecipe);
+
+            // Resolve the EditRecipePage from the service provider
+            var editRecipePage = new EditRecipePage(newRecipe, RecipeList, "Add New Recipe");
+
+            // Navigate to the EditRecipePage
+            await Navigation.PushModalAsync(editRecipePage);
+
+            // Save the updated RecipeList to JSON
+            SaveHelper.SaveRecipeListToJson(RecipeList);
         }
 
         private async void OnDeleteRecipeClicked(object sender, EventArgs e)

@@ -1,0 +1,65 @@
+[
+  {
+    "Id": "d19a587d-5e4b-4f8d-9266-1a56a77ff7cd",
+    "Name": "Spaghetti Bolognese",
+    "Description": "A classic Italian pasta dish with a rich meat sauce.",
+    "TimeToMake": 45.5,
+    "ImageURl": "https://example.com/spaghetti-bolognese.jpg"
+  },
+  {
+    "Id": "fb5a792b-d38c-441b-9f64-ef74bbec7f1a",
+    "Name": "Chicken Curry",
+    "Description": "A flavorful curry made with tender chicken and spices.",
+    "TimeToMake": 60.0,
+    "ImageURl": "https://example.com/chicken-curry.jpg"
+  },
+  {
+    "Id": "f15a90cf-99c9-45e4-91c6-b1c308d6e2f2",
+    "Name": "Grilled Cheese Sandwich",
+    "Description": "A simple yet delicious sandwich with melted cheese.",
+    "TimeToMake": 10.0,
+    "ImageURl": "https://example.com/grilled-cheese.jpg"
+  },
+  {
+    "Id": "0c0f6a74-44a9-40b8-a3bb-f4789ffcd86e",
+    "Name": "Beef Tacos",
+    "Description": "Tacos filled with seasoned beef and topped with fresh ingredients.",
+    "TimeToMake": 30.0,
+    "ImageURl": "https://example.com/beef-tacos.jpg"
+  },
+  {
+    "Id": "e0d4f5b8-24b3-4f2a-99af-e5a947164d47",
+    "Name": "Vegetable Stir Fry",
+    "Description": "A healthy stir fry with mixed vegetables and soy sauce.",
+    "TimeToMake": 25.5,
+    "ImageURl": "https://example.com/vegetable-stir-fry.jpg"
+  },
+  {
+    "Id": "74f2d04b-948e-4c45-85b3-437c8a0cfb2b",
+    "Name": "Pancakes",
+    "Description": "Fluffy pancakes served with syrup and butter.",
+    "TimeToMake": 20.0,
+    "ImageURl": "https://example.com/pancakes.jpg"
+  },
+  {
+    "Id": "5f833f9f-b0f7-4c67-b2ae-7b84a189484e",
+    "Name": "Caesar Salad",
+    "Description": "A fresh salad with romaine lettuce, croutons, and Caesar dressing.",
+    "TimeToMake": 15.0,
+    "ImageURl": "https://example.com/caesar-salad.jpg"
+  },
+  {
+    "Id": "daec3a84-32b0-41f7-946b-3e4c81b9a5ae",
+    "Name": "Chocolate Chip Cookies",
+    "Description": "Classic cookies filled with gooey chocolate chips.",
+    "TimeToMake": 30.0,
+    "ImageURl": "https://example.com/chocolate-chip-cookies.jpg"
+  },
+  {
+    "Id": "c9fa2f23-5f45-44de-82e7-6c30f42e3441",
+    "Name": "Beef Stroganoff",
+    "Description": "Tender beef strips in a creamy mushroom sauce, served over noodles.",
+    "TimeToMake": 50.0,
+    "ImageURl": "https://example.com/beef-stroganoff.jpg"
+  }
+]
