@@ -53,6 +53,16 @@
                 FontFamily="Pixel"
                 />
 
+            <Button
+                x:Name="RecipeAPIGetButton"
+                Text="Get Recipes Online" 
+                SemanticProperties.Hint="Opens recipe page"
+                Clicked="btnGetRecipesOnlineClicked"
+                HorizontalOptions="Fill" 
+                FontSize="Medium"
+                FontFamily="Pixel"
+                />  
+
         </VerticalStackLayout>
     </ScrollView>
 

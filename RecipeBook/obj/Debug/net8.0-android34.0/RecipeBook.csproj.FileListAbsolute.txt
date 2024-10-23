@@ -1034,3 +1034,17 @@ C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.
 C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.0-android34.0\stamp\_GenerateJavaStubs.stamp
 C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.0-android34.0\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.0-android34.0\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.0-android34.0\android\assets\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.0-android34.0\android\assets\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.0-android34.0\android\assets\Microsoft.AspNetCore.Http.dll
+C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.0-android34.0\android\assets\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.0-android34.0\android\assets\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.0-android34.0\android\assets\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.0-android34.0\android\assets\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.0-android34.0\android\assets\Microsoft.Extensions.Diagnostics.dll
+C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.0-android34.0\android\assets\Microsoft.Extensions.Http.dll
+C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.0-android34.0\android\assets\Microsoft.Extensions.ObjectPool.dll
+C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.0-android34.0\android\assets\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.0-android34.0\android\assets\Microsoft.Net.Http.Headers.dll
+C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.0-android34.0\android\assets\Newtonsoft.Json.dll
+C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeBook\obj\Debug\net8.0-android34.0\android\assets\System.IO.Pipelines.dll

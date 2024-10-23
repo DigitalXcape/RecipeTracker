@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using RecipeBook.Recipes;
+using RecipeBook.Services;
 
 namespace RecipeBook
 {
@@ -19,6 +20,12 @@ namespace RecipeBook
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
+            builder.Services.AddHttpClient<RecipeService>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:7148");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+            });
 
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddTransient<EditRecipePage>();

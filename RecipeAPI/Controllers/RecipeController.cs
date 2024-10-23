@@ -19,6 +19,7 @@ namespace RecipeAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Recipe>>> GetRecipes()
         {
+            Console.WriteLine("GetRecipes called");
             var recipes = await recipeService.GetRecipesAsync();
             return Ok(recipes);
         }

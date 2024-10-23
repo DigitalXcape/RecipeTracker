@@ -1,4 +1,6 @@
-﻿using RecipeBook.Recipes;
+﻿using Newtonsoft.Json;
+using RecipeBook.Recipes;
+using RecipeBook.Services;
 
 namespace RecipeBook
 {
@@ -6,11 +8,15 @@ namespace RecipeBook
     {
         public RecipeList RecipeList { get; private set; }
 
-        public MainPage(RecipeList recipeList)
+        private readonly RecipeService recipeService;
+
+        public MainPage(RecipeList recipeList, RecipeService recipeService)
         {
             InitializeComponent();
 
             RecipeList = recipeList;
+
+            this.recipeService = recipeService;
 
             LoadRecipeList();
         }
@@ -43,6 +49,28 @@ namespace RecipeBook
         private async void btnYourFavoriteRecipesClicked(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync("//FavoritesPage");
+        }
+
+        private async void btnGetRecipesOnlineClicked(object sender, EventArgs e)
+        {
+            try
+            {
+                string recipesJson = await recipeService.GetAllRecipesAsync();
+
+                List<Recipe> recipes = JsonConvert.DeserializeObject<List<Recipe>>(recipesJson);
+
+                RecipeList.Recipes.Clear();
+                foreach (var recipe in recipes)
+                {
+                    RecipeList.Recipes.Add(recipe);
+                }
+
+                await DisplayAlert("Success", "Recipes loaded successfully!", "OK");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"Failed to load recipes: {ex.Message}", "OK");
+            }
         }
 
         private void OnThemeSelected(object sender, EventArgs e)
