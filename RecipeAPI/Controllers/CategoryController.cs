@@ -4,7 +4,7 @@ using RecipeAPI.Services;
 
 namespace RecipeAPI.Controllers
 {
-    [ApiController]
+    /*[ApiController]
     [Route("api/[controller]")]
     public class CategoryController : Controller
     {
@@ -89,5 +89,5 @@ namespace RecipeAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
-    }
+    }*/
 }

@@ -23,7 +23,7 @@ namespace RecipeAPI.Services
         {
             try
             {
-                return await recipeRepository.GetRecipesAsync(recipesFilePath);
+                return await recipeRepository.GetRecipesAsync();
             }
             catch (Exception ex)
             {
@@ -36,7 +36,7 @@ namespace RecipeAPI.Services
         {
             try
             {
-                return await recipeRepository.GetRecipesAsync(favoritesFilePath);
+                return await recipeRepository.GetRecipesAsync();
             }
             catch (Exception ex)
             {
@@ -53,7 +53,7 @@ namespace RecipeAPI.Services
                 throw new ArgumentNullException(nameof(recipe), "Recipe cannot be null");
             }
             logger.LogInformation("Adding recipe with id");
-            await recipeRepository.AddRecipeAsync(recipe, recipesFilePath);
+            await recipeRepository.AddRecipeAsync(recipe);
         }
 
         public async Task AddFavoriteRecipeAsync(Recipe recipe)
@@ -64,7 +64,7 @@ namespace RecipeAPI.Services
                 throw new ArgumentNullException(nameof(recipe), "Recipe cannot be null");
             }
             logger.LogInformation("Adding recipe with id");
-            await recipeRepository.AddRecipeAsync(recipe, favoritesFilePath);
+            await recipeRepository.AddRecipeAsync(recipe);
         }
 
         public async Task DeleteRecipeAsync(Guid id)
@@ -78,8 +78,8 @@ namespace RecipeAPI.Services
                     throw new ArgumentNullException(nameof(id), "Id cannot be empty");
                 }
 
-                // Call the repository to delete the coffee and await the task
-                await recipeRepository.DeleteRecipeAsync(id, recipesFilePath);
+                // Call the repository to delete the Recipe and await the task
+                await recipeRepository.DeleteRecipeAsync(id);
                 logger.LogInformation("Deleted recipe with id {0}", id);
             }
             catch (KeyNotFoundException ex)
@@ -105,8 +105,8 @@ namespace RecipeAPI.Services
                     throw new ArgumentNullException(nameof(id), "Id cannot be empty");
                 }
 
-                // Call the repository to delete the coffee and await the task
-                await recipeRepository.DeleteRecipeAsync(id, favoritesFilePath);
+                // Call the repository to delete the recipe and await the task
+                await recipeRepository.DeleteRecipeAsync(id);
                 logger.LogInformation("Deleted recipe with id {0}", id);
             }
             catch (KeyNotFoundException ex)
@@ -125,7 +125,7 @@ namespace RecipeAPI.Services
         {
             try
             {
-                return await recipeRepository.GetRecipeByIdAsync(id, recipesFilePath);
+                return await recipeRepository.GetRecipeByIdAsync(id);
             }
             catch (KeyNotFoundException ex)
             {
@@ -144,7 +144,7 @@ namespace RecipeAPI.Services
         {
             try
             {
-                return await recipeRepository.GetRecipeByIdAsync(id, favoritesFilePath);
+                return await recipeRepository.GetRecipeByIdAsync(id);
             }
             catch (KeyNotFoundException ex)
             {
@@ -176,14 +176,14 @@ namespace RecipeAPI.Services
             try
             {
                 // Verify existence
-                var existingRecipe = await recipeRepository.GetRecipeByIdAsync(recipe.Id, recipesFilePath);
+                var existingRecipe = await recipeRepository.GetRecipeByIdAsync(recipe.Id);
                 if (existingRecipe == null)
                 {
                     logger.LogError("Recipe with Id {RecipeId} not found.", recipe.Id);
                     throw new KeyNotFoundException($"Recipe with Id {recipe.Id} not found.");
                 }
 
-                await recipeRepository.UpdateRecipeAsync(recipe, recipesFilePath);
+                await recipeRepository.UpdateRecipeAsync(recipe);
                 logger.LogInformation("Successfully updated recipe with Id {RecipeId}.", recipe.Id);
             }
             catch (KeyNotFoundException ex)
@@ -202,7 +202,7 @@ namespace RecipeAPI.Services
         {
             try
             {
-                var existingRecipe = await recipeRepository.GetRecipeByIdAsync(id, recipesFilePath);
+                var existingRecipe = await recipeRepository.GetRecipeByIdAsync(id);
 
                 if (existingRecipe == null)
                 {
@@ -210,7 +210,7 @@ namespace RecipeAPI.Services
                     throw new KeyNotFoundException($"Recipe with Id {id} not found.");
                 }
 
-                await recipeRepository.AddRecipeAsync(existingRecipe, favoritesFilePath);
+                await recipeRepository.AddRecipeAsync(existingRecipe);
             }
             catch (KeyNotFoundException ex)
             {
@@ -222,7 +222,7 @@ namespace RecipeAPI.Services
         {
             try
             {
-                await recipeRepository.DeleteRecipeAsync(id, favoritesFilePath);
+                await recipeRepository.DeleteRecipeAsync(id);
             }
             catch(Exception ex)
             {

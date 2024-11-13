@@ -1,0 +1,22 @@
+CREATE DATABASE RecipeDB;
+GO
+
+USE RecipeDB;
+GO
+
+CREATE DATABASE RecipeDB;
+GO
+
+USE RecipeDB;
+GO
+
+CREATE TABLE Recipes (
+    Id UNIQUEIDENTIFIER PRIMARY KEY,
+    Name NVARCHAR(100),
+    Characteristic NVARCHAR(255),
+    TimeToMake DECIMAL(10, 2),
+    ImageURL NVARCHAR(255),
+    Ingredients NVARCHAR(MAX),
+    Instructions NVARCHAR(MAX)
+);
+GO

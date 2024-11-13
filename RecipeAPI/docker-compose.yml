@@ -1,0 +1,115 @@
+# docker-compose.yml
+# This Docker Compose file sets up two services:
+# 1. sqlserver: Runs Microsoft SQL Server in a Docker container.
+# 2. api: Runs your .NET API application, which depends on the SQL Server.
+
+version: '3.8'  # Specifies the Docker Compose file format version.
+
+services:
+  
+  # ----------------------------
+  # SQL Server Service Definition
+  # ----------------------------
+  sqlserver:
+    # Docker image for Microsoft SQL Server 2019 Express Edition.
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    
+    # Assign a specific name to the container for easier reference.
+    container_name: sqlserver
+    
+    # Environment variables to configure SQL Server.
+    environment:
+      # Sets the system administrator (sa) password. Must meet SQL Server's complexity requirements.
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      
+      # Accepts the End User License Agreement (EULA). Mandatory for running SQL Server containers.
+      ACCEPT_EULA: "Y"
+      
+      # Specifies the SQL Server edition to use. "Express" is a free, lightweight version suitable for development.
+      MSSQL_PID: "Express"
+    
+    # Port mapping to expose SQL Server's default port.
+    ports:
+      - "1433:1433"  # Maps port 1433 of the container to port 1433 on the host machine.
+    
+    # Volume mappings to persist data and initialize the database.
+    volumes:
+      # Persists SQL Server data to ensure data is not lost when the container restarts or is removed.
+      - sqlserverdata:/var/opt/mssql
+      
+      # (Optional) If you have any scripts, they won't be auto-executed. Initialization is handled in the application.
+      # Remove the following line as SQL Server Docker image does not support automatic execution of init.sql.
+      #- ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    
+    # Network configuration to allow communication between services.
+    networks:
+      - app-network  # Connects the sqlserver container to the "app-network".
+    
+    # Health check to ensure SQL Server is up and running before other services depend on it.
+    healthcheck:
+      # Command to test SQL Server's availability by executing a simple SQL query.
+      test: ["CMD", "/opt/mssql-tools/bin/sqlcmd", "-S", "localhost", "-U", "sa", "-P", "YourStrong!Passw0rd", "-Q", "SELECT 1"]
+      
+      # Time between each health check execution.
+      interval: 10s
+      
+      # Maximum time allowed for the health check command to complete.
+      timeout: 5s
+      
+      # Number of consecutive failures needed before marking the service as unhealthy.
+      retries: 10
+
+  # ----------------------------
+  # .NET API Service Definition
+  # ----------------------------
+  api:
+    # Build configuration for the API service.
+    build:
+      # Context defines the build directory. Here, it's the current directory where the Dockerfile is located.
+      context: .
+      
+      # Specifies the Dockerfile to use for building the image.
+      dockerfile: Dockerfile
+    
+    # Assign a specific name to the container for easier reference.
+    container_name: dotnet-api
+    
+    # Environment variables for the API application.
+    environment:
+      # Connection string for the API to connect to the SQL Server database.
+      # It uses the service name 'sqlserver' as the server address, which Docker resolves via the network.
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=RecipeDB;User ID=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True;
+      
+      # Sets the ASP.NET Core environment to "Development" for enhanced debugging and verbose logging.
+      - ASPNETCORE_ENVIRONMENT=Development
+    
+    # Port mapping to expose the API's port.
+    ports:
+      - "5000:80"  # Maps port 80 of the container to port 5000 on the host machine.
+    
+    # Specifies service dependencies to control startup order.
+    depends_on:
+      sqlserver:
+        # Ensures the API service starts only after the sqlserver service is healthy.
+        condition: service_healthy
+    
+    # Network configuration to allow communication between services.
+    networks:
+      - app-network  # Connects the api container to the "app-network".
+
+# -----------------------------------
+# Networks Configuration
+# Defines custom networks for inter-service communication.
+# -----------------------------------
+networks:
+  app-network:
+    driver: bridge  # Uses the default "bridge" network driver for local container communication.
+
+# -----------------------------------
+# Volumes Configuration
+# Defines named volumes for persistent storage.
+# -----------------------------------
+volumes:
+  sqlserverdata:
+    # Named volume 'sqlserverdata' is used to persist SQL Server data outside the container.
+    # This ensures data durability across container restarts or removals.

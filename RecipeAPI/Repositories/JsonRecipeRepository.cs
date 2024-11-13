@@ -5,13 +5,13 @@ namespace RecipeAPI.Repositories
 {
     public class JsonRecipeRepository : IRecipeRepository
     {
-
+        readonly string filePath = "Data/recipes.json";
         public JsonRecipeRepository()
         {
 
         }
 
-        public async Task<IEnumerable<Recipe>> GetRecipesAsync(string filePath)
+        public async Task<IEnumerable<Recipe>> GetRecipesAsync()
         {
             try
             {
@@ -25,13 +25,13 @@ namespace RecipeAPI.Repositories
             }
         }
 
-        public async Task AddRecipeAsync(Recipe recipe, string filePath)
+        public async Task AddRecipeAsync(Recipe recipe)
         {
             try
             {
-                var recipes = (await GetRecipesAsync(filePath)).ToList();
+                var recipes = (await GetRecipesAsync()).ToList();
                 recipes.Add(recipe);
-                await SaveRecipesAsync(recipes, filePath);
+                await SaveRecipesAsync(recipes);
             }
             catch (Exception ex)
             {
@@ -39,11 +39,11 @@ namespace RecipeAPI.Repositories
             }
         }
 
-        public async Task DeleteRecipeAsync(Guid id, string filePath)
+        public async Task DeleteRecipeAsync(Guid id)
         {
             try
             {
-                var recipes = (await GetRecipesAsync(filePath)).ToList();
+                var recipes = (await GetRecipesAsync()).ToList();
                 var recipe = recipes.FirstOrDefault(c => c.Id == id);
 
                 if (recipe == null)
@@ -52,7 +52,7 @@ namespace RecipeAPI.Repositories
                 }
 
                 recipes.Remove(recipe);
-                await SaveRecipesAsync(recipes, filePath);
+                await SaveRecipesAsync(recipes);
             }
             catch (Exception ex)
             {
@@ -60,11 +60,11 @@ namespace RecipeAPI.Repositories
             }
         }
 
-        public async Task<Recipe> GetRecipeByIdAsync(Guid id, string filePath)
+        public async Task<Recipe> GetRecipeByIdAsync(Guid id)
         {
             try
             {
-                var recipes = await GetRecipesAsync(filePath);
+                var recipes = await GetRecipesAsync();
                 var recipe = recipes.FirstOrDefault(c => c.Id == id);
 
                 if (recipe == null)
@@ -80,11 +80,11 @@ namespace RecipeAPI.Repositories
             }
         }
 
-        public async Task UpdateRecipeAsync(Recipe recipe, string filePath)
+        public async Task UpdateRecipeAsync(Recipe recipe)
         {
             try
             {
-                var recipes = (await GetRecipesAsync(filePath)).ToList();
+                var recipes = (await GetRecipesAsync()).ToList();
                 var existingRecipe = recipes.FirstOrDefault(c => c.Id == recipe.Id);
                 if (existingRecipe == null)
                 {
@@ -94,7 +94,7 @@ namespace RecipeAPI.Repositories
                 {
                     recipes.Remove(existingRecipe);
                     recipes.Add(recipe);
-                    await SaveRecipesAsync(recipes, filePath);
+                    await SaveRecipesAsync(recipes);
                 }
 
             }
@@ -104,7 +104,7 @@ namespace RecipeAPI.Repositories
             }
         }
 
-        private async Task SaveRecipesAsync(List<Recipe> recipes, string filePath)
+        private async Task SaveRecipesAsync(List<Recipe> recipes)
         {
             try
             {
