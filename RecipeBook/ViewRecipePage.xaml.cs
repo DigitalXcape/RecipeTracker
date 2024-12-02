@@ -1,4 +1,5 @@
 using RecipeBook.Recipes;
+
 namespace RecipeBook;
 
 public partial class ViewRecipePage : ContentPage
@@ -24,5 +25,20 @@ public partial class ViewRecipePage : ContentPage
 
         // Navigate to the EditRecipePage
         await Navigation.PushAsync(editRecipePage);
+    }
+
+    private async void btnUpdateOnlineClicked(object sender, EventArgs e)
+    {
+        RecipeBook.UpdateRecipeInDatabase(Recipe);
+    }
+
+    private async void btnDeleteOnlineClicked(object sender, EventArgs e)
+    {
+        RecipeBook.DeleteRecipeFromDatabase(Recipe.Id);
+    }
+
+    private async void btnAddOnlineClicked(object sender, EventArgs e)
+    {
+        RecipeBook.AddRecipeToDatabase(Recipe);
     }
 }

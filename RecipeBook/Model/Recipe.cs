@@ -13,6 +13,7 @@ namespace RecipeBook.Recipes
     {
         private string _name;
         private string _description;
+        public String Id { get; set; }
 
         private bool _favorite;
 

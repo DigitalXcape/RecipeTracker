@@ -1,0 +1,182 @@
+2024-11-25 18:34:38.353 -06:00 [INF] Database 'RecipeDB' already exists.
+2024-11-25 18:34:38.655 -06:00 [INF] Recipe with ID d19a587d-5e4b-4f8d-9266-1a56a77ff7cd already exists..skipping
+2024-11-25 18:34:38.656 -06:00 [INF] Recipe with ID fb5a792b-d38c-441b-9f64-ef74bbec7f1a already exists..skipping
+2024-11-25 18:34:38.657 -06:00 [INF] Recipe with ID f15a90cf-99c9-45e4-91c6-b1c308d6e2f2 already exists..skipping
+2024-11-25 18:34:38.658 -06:00 [INF] Recipe with ID 0c0f6a74-44a9-40b8-a3bb-f4789ffcd86e already exists..skipping
+2024-11-25 18:34:39.028 -06:00 [INF] Now listening on: http://localhost:5097
+2024-11-25 18:34:39.053 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-25 18:34:39.053 -06:00 [INF] Hosting environment: Development
+2024-11-25 18:34:39.053 -06:00 [INF] Content root path: C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeAPI
+2024-11-25 18:34:41.635 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5097/swagger/index.html - null null
+2024-11-25 18:34:41.887 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5097/swagger/index.html - 200 null text/html;charset=utf-8 257.9746ms
+2024-11-25 18:34:41.986 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5097/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-25 18:34:41.991 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5097/_vs/browserLink - null null
+2024-11-25 18:34:41.997 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5097/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 10.927ms
+2024-11-25 18:34:42.040 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5097/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.1429ms
+2024-11-25 18:34:45.076 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5097/swagger/v1/swagger.json - null null
+2024-11-25 18:34:45.159 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5097/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 83.6538ms
+2024-11-25 18:34:53.418 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5097/api/Recipe - null null
+2024-11-25 18:34:53.422 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-11-25 18:34:53.426 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 18:34:53.442 -06:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecipeAPI.Models.Recipe]]] GetRecipes() on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 18:34:53.462 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RecipeAPI.Models.Recipe, RecipeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 18:34:53.468 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI) in 24.3944ms
+2024-11-25 18:34:53.468 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 18:34:53.469 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5097/api/Recipe - 200 null application/json; charset=utf-8 51.1407ms
+2024-11-25 18:35:07.286 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5097/api/Recipe/d19a587d-5e4b-4f8d-9266-1a56a77ff7cd - null null
+2024-11-25 18:35:07.287 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipeById (RecipeAPI)'
+2024-11-25 18:35:07.293 -06:00 [INF] Route matched with {action = "GetRecipeById", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecipeAPI.Models.Recipe]] GetRecipeById(System.Guid) on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 18:35:07.302 -06:00 [INF] Executing OkObjectResult, writing value of type 'RecipeAPI.Models.Recipe'.
+2024-11-25 18:35:07.303 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipeById (RecipeAPI) in 9.6888ms
+2024-11-25 18:35:07.303 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipeById (RecipeAPI)'
+2024-11-25 18:35:07.303 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5097/api/Recipe/d19a587d-5e4b-4f8d-9266-1a56a77ff7cd - 200 null application/json; charset=utf-8 16.607ms
+2024-11-25 19:19:03.339 -06:00 [INF] Database 'RecipeDB' already exists.
+2024-11-25 19:19:03.688 -06:00 [INF] Recipe with ID d19a587d-5e4b-4f8d-9266-1a56a77ff7cd already exists..skipping
+2024-11-25 19:19:03.689 -06:00 [INF] Recipe with ID fb5a792b-d38c-441b-9f64-ef74bbec7f1a already exists..skipping
+2024-11-25 19:19:03.690 -06:00 [INF] Recipe with ID f15a90cf-99c9-45e4-91c6-b1c308d6e2f2 already exists..skipping
+2024-11-25 19:19:03.690 -06:00 [INF] Recipe with ID 0c0f6a74-44a9-40b8-a3bb-f4789ffcd86e already exists..skipping
+2024-11-25 19:19:03.955 -06:00 [INF] Now listening on: http://localhost:5097
+2024-11-25 19:19:03.979 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-25 19:19:03.979 -06:00 [INF] Hosting environment: Development
+2024-11-25 19:19:03.979 -06:00 [INF] Content root path: C:\Users\kodyp\OneDrive\Desktop\schoolstuff\MobileDev\RecipeAPI
+2024-11-25 19:19:05.047 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5097/swagger/index.html - null null
+2024-11-25 19:19:05.227 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5097/swagger/index.html - 200 null text/html;charset=utf-8 185.1527ms
+2024-11-25 19:19:05.298 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5097/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-25 19:19:05.298 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5097/_vs/browserLink - null null
+2024-11-25 19:19:05.302 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5097/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.7543ms
+2024-11-25 19:19:05.329 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5097/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.6054ms
+2024-11-25 19:19:05.482 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5097/swagger/v1/swagger.json - null null
+2024-11-25 19:19:05.569 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5097/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 87.0829ms
+2024-11-25 19:19:59.050 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5097/api/Recipe - null null
+2024-11-25 19:19:59.057 -06:00 [WRN] Failed to determine the https port for redirect.
+2024-11-25 19:19:59.061 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:19:59.082 -06:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecipeAPI.Models.Recipe]]] GetRecipes() on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 19:19:59.111 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RecipeAPI.Models.Recipe, RecipeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 19:19:59.118 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI) in 34.3384ms
+2024-11-25 19:19:59.119 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:19:59.120 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5097/api/Recipe - 200 null application/json; charset=utf-8 72.1177ms
+2024-11-25 19:22:31.026 -06:00 [INF] Request starting HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - null null
+2024-11-25 19:22:31.027 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:22:31.027 -06:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecipeAPI.Models.Recipe]]] GetRecipes() on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 19:22:31.034 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RecipeAPI.Models.Recipe, RecipeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 19:22:31.034 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI) in 7.1257ms
+2024-11-25 19:22:31.035 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:22:31.035 -06:00 [INF] Request finished HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - 200 null application/json; charset=utf-8 8.4233ms
+2024-11-25 19:23:07.511 -06:00 [INF] Request starting HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - null null
+2024-11-25 19:23:07.512 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:23:07.512 -06:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecipeAPI.Models.Recipe]]] GetRecipes() on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 19:23:07.516 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RecipeAPI.Models.Recipe, RecipeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 19:23:07.516 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI) in 3.7904ms
+2024-11-25 19:23:07.516 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:23:07.516 -06:00 [INF] Request finished HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - 200 null application/json; charset=utf-8 4.5257ms
+2024-11-25 19:23:12.264 -06:00 [INF] Request starting HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - null null
+2024-11-25 19:23:12.264 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:23:12.264 -06:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecipeAPI.Models.Recipe]]] GetRecipes() on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 19:23:12.268 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RecipeAPI.Models.Recipe, RecipeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 19:23:12.268 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI) in 3.3488ms
+2024-11-25 19:23:12.268 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:23:12.268 -06:00 [INF] Request finished HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - 200 null application/json; charset=utf-8 4.0068ms
+2024-11-25 19:23:16.821 -06:00 [INF] Request starting HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - null null
+2024-11-25 19:23:16.821 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:23:16.821 -06:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecipeAPI.Models.Recipe]]] GetRecipes() on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 19:23:16.824 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RecipeAPI.Models.Recipe, RecipeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 19:23:16.824 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI) in 3.0228ms
+2024-11-25 19:23:16.824 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:23:16.825 -06:00 [INF] Request finished HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - 200 null application/json; charset=utf-8 3.8658ms
+2024-11-25 19:23:40.613 -06:00 [INF] Request starting HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - null null
+2024-11-25 19:23:40.614 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:23:40.617 -06:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecipeAPI.Models.Recipe]]] GetRecipes() on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 19:23:40.620 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RecipeAPI.Models.Recipe, RecipeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 19:23:40.620 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI) in 3.6705ms
+2024-11-25 19:23:40.621 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:23:40.621 -06:00 [INF] Request finished HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - 200 null application/json; charset=utf-8 7.6946ms
+2024-11-25 19:23:52.297 -06:00 [INF] Request starting HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - null null
+2024-11-25 19:23:52.298 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:23:52.298 -06:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecipeAPI.Models.Recipe]]] GetRecipes() on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 19:23:52.304 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RecipeAPI.Models.Recipe, RecipeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 19:23:52.304 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI) in 6.3785ms
+2024-11-25 19:23:52.304 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:23:52.305 -06:00 [INF] Request finished HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - 200 null application/json; charset=utf-8 7.92ms
+2024-11-25 19:23:58.638 -06:00 [INF] Request starting HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - null null
+2024-11-25 19:23:58.638 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:23:58.638 -06:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecipeAPI.Models.Recipe]]] GetRecipes() on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 19:23:58.641 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RecipeAPI.Models.Recipe, RecipeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 19:23:58.641 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI) in 3.3756ms
+2024-11-25 19:23:58.641 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:23:58.642 -06:00 [INF] Request finished HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - 200 null application/json; charset=utf-8 3.9298ms
+2024-11-25 19:26:50.055 -06:00 [INF] Request starting HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - null null
+2024-11-25 19:26:50.056 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:26:50.057 -06:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecipeAPI.Models.Recipe]]] GetRecipes() on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 19:26:50.060 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RecipeAPI.Models.Recipe, RecipeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 19:26:50.060 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI) in 3.2426ms
+2024-11-25 19:26:50.060 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:26:50.060 -06:00 [INF] Request finished HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - 200 null application/json; charset=utf-8 5.1544ms
+2024-11-25 19:27:37.254 -06:00 [INF] Request starting HTTP/1.1 PUT http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - application/json; charset=utf-8 175
+2024-11-25 19:27:37.255 -06:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-11-25 19:27:37.255 -06:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-11-25 19:27:37.255 -06:00 [INF] Request finished HTTP/1.1 PUT http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - 405 0 null 1.2042ms
+2024-11-25 19:28:21.701 -06:00 [INF] Request starting HTTP/1.1 PUT http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - application/json; charset=utf-8 175
+2024-11-25 19:28:21.704 -06:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-11-25 19:28:21.704 -06:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-11-25 19:28:21.705 -06:00 [INF] Request finished HTTP/1.1 PUT http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - 405 0 null 3.4163ms
+2024-11-25 19:31:37.611 -06:00 [INF] Request starting HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - null null
+2024-11-25 19:31:37.614 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:31:37.614 -06:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecipeAPI.Models.Recipe]]] GetRecipes() on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 19:31:37.618 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RecipeAPI.Models.Recipe, RecipeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 19:31:37.618 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI) in 3.6912ms
+2024-11-25 19:31:37.618 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:31:37.618 -06:00 [INF] Request finished HTTP/1.1 GET http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - 200 null application/json; charset=utf-8 6.6641ms
+2024-11-25 19:32:18.844 -06:00 [INF] Request starting HTTP/1.1 PUT http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe/d19a587d-5e4b-4f8d-9266-1a56a77ff7cd - application/json; charset=utf-8 300
+2024-11-25 19:32:18.848 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.UpdateRecipe (RecipeAPI)'
+2024-11-25 19:32:18.856 -06:00 [INF] Route matched with {action = "UpdateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecipeAPI.Models.Recipe]] UpdateRecipe(System.Guid, RecipeAPI.Models.Recipe) on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 19:32:18.973 -06:00 [INF] Recipe with ID d19a587d-5e4b-4f8d-9266-1a56a77ff7cd updated successfully.
+2024-11-25 19:32:18.973 -06:00 [INF] Successfully updated recipe with Id "d19a587d-5e4b-4f8d-9266-1a56a77ff7cd".
+2024-11-25 19:32:18.974 -06:00 [INF] Executing OkObjectResult, writing value of type 'RecipeAPI.Models.Recipe'.
+2024-11-25 19:32:18.974 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.UpdateRecipe (RecipeAPI) in 117.9025ms
+2024-11-25 19:32:18.974 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.UpdateRecipe (RecipeAPI)'
+2024-11-25 19:32:18.974 -06:00 [INF] Request finished HTTP/1.1 PUT http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe/d19a587d-5e4b-4f8d-9266-1a56a77ff7cd - 200 null application/json; charset=utf-8 130.0719ms
+2024-11-25 19:32:30.584 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5097/api/Recipe - null null
+2024-11-25 19:32:30.584 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:32:30.584 -06:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecipeAPI.Models.Recipe]]] GetRecipes() on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 19:32:30.588 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RecipeAPI.Models.Recipe, RecipeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 19:32:30.588 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI) in 3.8959ms
+2024-11-25 19:32:30.588 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:32:30.590 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5097/api/Recipe - 200 null application/json; charset=utf-8 5.7934ms
+2024-11-25 19:32:57.991 -06:00 [INF] Request starting HTTP/1.1 DELETE http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe/d19a587d-5e4b-4f8d-9266-1a56a77ff7cd - application/x-www-form-urlencoded null
+2024-11-25 19:32:57.991 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.DeleteRecipe (RecipeAPI)'
+2024-11-25 19:32:57.995 -06:00 [INF] Route matched with {action = "DeleteRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteRecipe(System.Guid) on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 19:32:58.051 -06:00 [INF] Deleted recipe with id "d19a587d-5e4b-4f8d-9266-1a56a77ff7cd"
+2024-11-25 19:32:58.053 -06:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2024-11-25 19:32:58.053 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.DeleteRecipe (RecipeAPI) in 58.8426ms
+2024-11-25 19:32:58.054 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.DeleteRecipe (RecipeAPI)'
+2024-11-25 19:32:58.054 -06:00 [INF] Request finished HTTP/1.1 DELETE http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe/d19a587d-5e4b-4f8d-9266-1a56a77ff7cd - 204 null null 63.3143ms
+2024-11-25 19:33:01.897 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5097/api/Recipe - null null
+2024-11-25 19:33:01.897 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:33:01.897 -06:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecipeAPI.Models.Recipe]]] GetRecipes() on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 19:33:01.900 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RecipeAPI.Models.Recipe, RecipeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 19:33:01.901 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI) in 3.253ms
+2024-11-25 19:33:01.901 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:33:01.901 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5097/api/Recipe - 200 null application/json; charset=utf-8 4.0518ms
+2024-11-25 19:33:05.681 -06:00 [INF] Request starting HTTP/1.1 POST http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - application/json; charset=utf-8 300
+2024-11-25 19:33:05.681 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.AddRecipe (RecipeAPI)'
+2024-11-25 19:33:05.683 -06:00 [INF] Route matched with {action = "AddRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecipeAPI.Models.Recipe]] AddRecipe(RecipeAPI.Models.Recipe) on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 19:33:05.685 -06:00 [INF] Adding recipe with id
+2024-11-25 19:33:05.761 -06:00 [INF] Recipe with ID 2b94da1b-f459-482e-b636-3ab453537e18 added successfully.
+2024-11-25 19:33:05.762 -06:00 [INF] Executing CreatedAtActionResult, writing value of type 'RecipeAPI.Models.Recipe'.
+2024-11-25 19:33:05.775 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.AddRecipe (RecipeAPI) in 91.53ms
+2024-11-25 19:33:05.775 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.AddRecipe (RecipeAPI)'
+2024-11-25 19:33:05.775 -06:00 [INF] Request finished HTTP/1.1 POST http://adf4-2600-6c44-78f0-a450-4085-761c-1904-20ce.ngrok-free.app/api/Recipe - 201 null application/json; charset=utf-8 94.2492ms
+2024-11-25 19:33:07.592 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5097/api/Recipe - null null
+2024-11-25 19:33:07.592 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:33:07.592 -06:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecipeAPI.Models.Recipe]]] GetRecipes() on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 19:33:07.596 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RecipeAPI.Models.Recipe, RecipeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 19:33:07.598 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI) in 5.5491ms
+2024-11-25 19:33:07.598 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:33:07.598 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5097/api/Recipe - 200 null application/json; charset=utf-8 6.6797ms
+2024-11-25 19:33:07.784 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5097/api/Recipe - null null
+2024-11-25 19:33:07.784 -06:00 [INF] Executing endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:33:07.784 -06:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecipeAPI.Models.Recipe]]] GetRecipes() on controller RecipeAPI.Controllers.RecipeController (RecipeAPI).
+2024-11-25 19:33:07.788 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RecipeAPI.Models.Recipe, RecipeAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 19:33:07.788 -06:00 [INF] Executed action RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI) in 3.6293ms
+2024-11-25 19:33:07.788 -06:00 [INF] Executed endpoint 'RecipeAPI.Controllers.RecipeController.GetRecipes (RecipeAPI)'
+2024-11-25 19:33:07.788 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5097/api/Recipe - 200 null application/json; charset=utf-8 4.259ms

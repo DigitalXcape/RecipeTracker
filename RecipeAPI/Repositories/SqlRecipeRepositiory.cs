@@ -54,8 +54,8 @@ namespace RecipeAPI.Repositories
                             }
                         }
 
-                        var insertQuery = @"INSERT INTO Recipes (Id, Name, Description, TimeToMake, ImageUrl, Ingredients, Instructions)
-                                    VALUES (@Id, @Name, @Description, @TimeToMake, @ImageUrl, @Ingredients, @Instructions)";
+                        var insertQuery = @"INSERT INTO Recipes (Id, Name, Description, TimeToMake, Ingredients, Instructions)
+                                    VALUES (@Id, @Name, @Description, @TimeToMake, @Ingredients, @Instructions)";
 
                         using (var insertCommand = new SqlCommand(insertQuery, connection))
                         {
@@ -64,8 +64,6 @@ namespace RecipeAPI.Repositories
                             insertCommand.Parameters.AddWithValue("@Description", recipe.Description);
                             insertCommand.Parameters.AddWithValue("@TimeToMake", recipe.TimeToMake);
 
-                            // Handle missing ImageUrl (set to NULL or a default value)
-                            insertCommand.Parameters.AddWithValue("@ImageUrl", recipe.ImageUrl ?? (object)DBNull.Value);
 
                             insertCommand.Parameters.AddWithValue("@Ingredients", JsonSerializer.Serialize(recipe.Ingredients));
                             insertCommand.Parameters.AddWithValue("@Instructions", JsonSerializer.Serialize(recipe.Instructions));
@@ -92,7 +90,6 @@ namespace RecipeAPI.Repositories
             Name NVARCHAR(100),
             Description NVARCHAR(255),
             TimeToMake DECIMAL(10, 2),
-            ImageUrl NVARCHAR(255),
             Ingredients NVARCHAR(MAX), -- Storing as a JSON string
             Instructions NVARCHAR(MAX) -- Storing as a JSON string
         );
@@ -193,7 +190,6 @@ namespace RecipeAPI.Repositories
                                 Name = reader["Name"] as string,
                                 Description = reader["Description"] as string,
                                 TimeToMake = (decimal)reader["TimeToMake"],
-                                ImageUrl = reader["ImageUrl"] as string,
                                 Ingredients = JsonSerializer.Deserialize<List<string>>(reader["Ingredients"].ToString()),
                                 Instructions = JsonSerializer.Deserialize<List<string>>(reader["Instructions"].ToString())
                             };
@@ -233,7 +229,6 @@ namespace RecipeAPI.Repositories
                                 Name = reader["Name"] as string,
                                 Description = reader["Description"] as string,
                                 TimeToMake = (decimal)reader["TimeToMake"],
-                                ImageUrl = reader["ImageUrl"] as string,
                                 Ingredients = JsonSerializer.Deserialize<List<string>>(reader["Ingredients"].ToString()),
                                 Instructions = JsonSerializer.Deserialize<List<string>>(reader["Instructions"].ToString())
                             });
@@ -249,14 +244,76 @@ namespace RecipeAPI.Repositories
             }
         }
 
-        public Task AddRecipeAsync(Recipe recipe)
+        public async Task AddRecipeAsync(Recipe recipe)
         {
-            throw new NotImplementedException();
+            var query = @"INSERT INTO Recipes (Id, Name, Description, TimeToMake, Ingredients, Instructions)
+                  VALUES (@Id, @Name, @Description, @TimeToMake, @Ingredients, @Instructions)";
+
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@Id", recipe.Id);
+                command.Parameters.AddWithValue("@Name", recipe.Name);
+                command.Parameters.AddWithValue("@Description", recipe.Description);
+                command.Parameters.AddWithValue("@TimeToMake", recipe.TimeToMake);
+                command.Parameters.AddWithValue("@Ingredients", JsonSerializer.Serialize(recipe.Ingredients));
+                command.Parameters.AddWithValue("@Instructions", JsonSerializer.Serialize(recipe.Instructions));
+
+                try
+                {
+                    await connection.OpenAsync();
+                    await command.ExecuteNonQueryAsync();
+                    logger.LogInformation($"Recipe with ID {recipe.Id} added successfully.");
+                }
+                catch (SqlException ex) when (ex.Number == 2627) // Unique constraint violation
+                {
+                    logger.LogWarning($"Recipe with ID {recipe.Id} already exists.");
+                    throw new InvalidOperationException($"A recipe with the same ID ({recipe.Id}) already exists.");
+                }
+                catch (Exception ex)
+                {
+                    logger.LogError(ex, "Error adding recipe");
+                    throw new Exception("Error adding recipe", ex);
+                }
+            }
         }
 
-        public Task UpdateRecipeAsync(Recipe recipe)
+        public async Task UpdateRecipeAsync(Recipe recipe)
         {
-            throw new NotImplementedException();
+            var query = @"UPDATE Recipes
+                  SET Name = @Name,
+                      Description = @Description,
+                      TimeToMake = @TimeToMake,
+                      Ingredients = @Ingredients,
+                      Instructions = @Instructions
+                  WHERE Id = @Id";
+
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@Id", recipe.Id);
+                command.Parameters.AddWithValue("@Name", recipe.Name);
+                command.Parameters.AddWithValue("@Description", recipe.Description);
+                command.Parameters.AddWithValue("@TimeToMake", recipe.TimeToMake);
+                command.Parameters.AddWithValue("@Ingredients", JsonSerializer.Serialize(recipe.Ingredients));
+                command.Parameters.AddWithValue("@Instructions", JsonSerializer.Serialize(recipe.Instructions));
+
+                try
+                {
+                    await connection.OpenAsync();
+                    var rowsAffected = await command.ExecuteNonQueryAsync();
+                    if (rowsAffected == 0)
+                    {
+                        throw new KeyNotFoundException($"Recipe with ID {recipe.Id} not found.");
+                    }
+                    logger.LogInformation($"Recipe with ID {recipe.Id} updated successfully.");
+                }
+                catch (Exception ex)
+                {
+                    logger.LogError(ex, "Error updating recipe");
+                    throw new Exception("Error updating recipe", ex);
+                }
+            }
         }
     }
 }

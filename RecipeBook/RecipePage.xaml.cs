@@ -1,4 +1,5 @@
 ﻿using RecipeBook.Recipes;
+using RecipeBook.Services;
 using System.Collections.ObjectModel;
 
 namespace RecipeBook
@@ -8,6 +9,8 @@ namespace RecipeBook
         int count = 0;
 
         public RecipeList RecipeList;
+
+        private readonly RecipeService recipeService;
 
         public RecipePage(RecipeList recipeList)
         {

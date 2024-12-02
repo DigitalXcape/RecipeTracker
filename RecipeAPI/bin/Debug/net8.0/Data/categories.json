@@ -1,0 +1,122 @@
+[
+  {
+    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+    "name": "Appetizers"
+  },
+  {
+    "id": "5a951b9d-982f-45ec-823c-c58d75ee7f45",
+    "name": "Main Courses"
+  },
+  {
+    "id": "8236b5c0-008f-44f2-8313-e86ac02bc6a2",
+    "name": "Desserts"
+  },
+  {
+    "id": "19b2a1ec-fc4d-4643-b9f5-f5cc7982f2e7",
+    "name": "Soups"
+  },
+  {
+    "id": "30a42b20-3dbf-4898-8df1-5e78c0cb8b25",
+    "name": "Salads"
+  },
+  {
+    "id": "db295872-3025-45b8-9fb1-6220b890c776",
+    "name": "Breakfast"
+  },
+  {
+    "id": "79d73cf2-0c04-4332-b4c5-200bba95ffbc",
+    "name": "Lunch"
+  },
+  {
+    "id": "b0be8a69-e4c4-4b91-973e-70e6ff7d8731",
+    "name": "Dinner"
+  },
+  {
+    "id": "42937b1c-8a54-4812-8e53-f7ab29b0bff9",
+    "name": "Vegetarian"
+  },
+  {
+    "id": "a5e03770-d4f9-4ba0-9038-cb4e17c30431",
+    "name": "Vegan"
+  },
+  {
+    "id": "c587bf2b-3f5e-4f74-9312-20879f3f89ed",
+    "name": "Gluten-Free"
+  },
+  {
+    "id": "cbe9b08e-f05d-45e8-8ae1-bf8cb572f536",
+    "name": "Keto"
+  },
+  {
+    "id": "1a831d71-ef4b-4c43-9470-6381b77c831e",
+    "name": "Paleo"
+  },
+  {
+    "id": "db2d5f73-5b30-4c46-b6c4-8fddc0f3426f",
+    "name": "Low Carb"
+  },
+  {
+    "id": "ef1d2d88-5c5e-43e0-a5ae-c8dc0c4a5633",
+    "name": "Low Calorie"
+  },
+  {
+    "id": "2c5fcb34-e82d-4bcb-a74f-53585e9cd348",
+    "name": "High Protein"
+  },
+  {
+    "id": "d4d6c8f0-64f0-487e-a44b-d9f1e782da3b",
+    "name": "Snacks"
+  },
+  {
+    "id": "44ab9789-2060-4d86-bb7a-cf46c77d8ae0",
+    "name": "Drinks"
+  },
+  {
+    "id": "49b3e92e-0eb7-4861-9753-60f713bcf9b5",
+    "name": "Smoothies"
+  },
+  {
+    "id": "547db9d2-49bb-4e6c-b027-d70f556ed404",
+    "name": "Seafood"
+  },
+  {
+    "id": "622c9eb3-6018-45b4-aab2-3964c4d1be80",
+    "name": "Pasta"
+  },
+  {
+    "id": "4b97f2e5-65c2-4f47-b299-5dcf89f3d59b",
+    "name": "Grilled"
+  },
+  {
+    "id": "84545d9d-31c5-4828-8c11-9065829b0746",
+    "name": "Baked"
+  },
+  {
+    "id": "542aa1be-0e8f-4d64-b9a6-bf6f5f962b74",
+    "name": "Fried"
+  },
+  {
+    "id": "0d76015b-47bb-4a01-9435-b0ac558a2cf6",
+    "name": "Stews"
+  },
+  {
+    "id": "54cb5f25-9b10-4cb5-b1d7-4b115f9fc7ab",
+    "name": "Barbecue"
+  },
+  {
+    "id": "94ec6b58-01bb-40a8-b1be-6741d15c87d5",
+    "name": "Slow Cooker"
+  },
+  {
+    "id": "e3c3b4be-098e-4cf3-8e27-765cc6458e3e",
+    "name": "Instant Pot"
+  },
+  {
+    "id": "3c3d2223-2588-4389-81b5-5a5f98fcf6c1",
+    "name": "Holiday"
+  },
+  {
+    "id": "62a58ecf-ece0-4632-a63d-c1b0e9cbf0ff",
+    "name": "Comfort Food"
+  }
+]

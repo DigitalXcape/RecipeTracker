@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using RecipeBook.Recipes;
 using RecipeBook.Services;
+using System.Collections.ObjectModel;
 
 namespace RecipeBook
 {
@@ -14,9 +15,9 @@ namespace RecipeBook
         {
             InitializeComponent();
 
-            RecipeList = recipeList;
-
             this.recipeService = recipeService;
+
+            RecipeList = recipeList;
 
             LoadRecipeList();
         }
@@ -27,50 +28,39 @@ namespace RecipeBook
         private void LoadRecipeList()
         {
             // Try to load the RecipeList from JSON
-            RecipeList = SaveHelper.LoadRecipeListFromJson();
+            var loadedRecipeList = SaveHelper.LoadRecipeListFromJson();
 
             // If loading returns null or an empty list, create a new one
-            if (RecipeList == null || RecipeList.Recipes.Count == 0)
+            if (loadedRecipeList == null || loadedRecipeList.Recipes.Count == 0)
             {
-                RecipeList = new RecipeList();
+                loadedRecipeList = new RecipeList();
             }
+
+            // Set the loaded RecipeList to the singleton
+            RecipeList = loadedRecipeList;
+            RecipeList.recipeService = recipeService;
+
+            // App.Current.Services.GetRequiredService<RecipeList>() = loadedRecipeList;
         }
 
         /// <summary>
         /// Click event for the recipe list button
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private async void btnYourRecipesClicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("//RecipePage");
+            var recipePage = new RecipePage(RecipeList);
+            await Navigation.PushAsync(recipePage);
         }
 
         private async void btnYourFavoriteRecipesClicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("//FavoritesPage");
+            var favoritePage = new FavoritesPage(RecipeList);
+            await Navigation.PushAsync(favoritePage);
         }
 
         private async void btnGetRecipesOnlineClicked(object sender, EventArgs e)
         {
-            try
-            {
-                string recipesJson = await recipeService.GetAllRecipesAsync();
-
-                List<Recipe> recipes = JsonConvert.DeserializeObject<List<Recipe>>(recipesJson);
-
-                RecipeList.Recipes.Clear();
-                foreach (var recipe in recipes)
-                {
-                    RecipeList.Recipes.Add(recipe);
-                }
-
-                await DisplayAlert("Success", "Recipes loaded successfully!", "OK");
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert("Error", $"Failed to load recipes: {ex.Message}", "OK");
-            }
+            RecipeList.GetRecipesFromDatabase();
         }
 
         private void OnThemeSelected(object sender, EventArgs e)
@@ -82,5 +72,4 @@ namespace RecipeBook
             (Application.Current as App).SetTheme(selectedTheme);
         }
     }
-
 }
